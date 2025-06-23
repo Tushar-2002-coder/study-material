@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Study Material Tushar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Study Material Tushar</title>
   <style>
     * {
       margin: 0;
@@ -15,11 +15,10 @@
       background: linear-gradient(to top, #9869cb, #805fd3, #4c75cf, #61db61, #dfdf66, #e3b867, #c45656);
       color: #333;
     }
-
     header {
       background: linear-gradient(to right, #d6e96e, #e11d41);
       padding: 20px;
-      color: rgb(255, 255, 255);
+      color: white;
       font-size: 2em;
       font-weight: bold;
       display: flex;
@@ -81,7 +80,7 @@
       display: none;
       position: absolute;
       background-color: white;
-      min-width: 160px;
+      min-width: 10%;
       box-shadow: 0px 8px 16px rgba(0,0,0,0.8);
       z-index: 1;
     }
@@ -99,48 +98,9 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
-    .logout-btn {
-      color: rgb(45, 31, 243);
-      cursor: pointer;
-      padding: 12px 5%;
-      text-decoration: none;
-      text-align: center;
-      font-weight: bold;
-      border-radius: 20px;
-      background: linear-gradient(to right, #a7ec66, #eab866);
-      float: right;
-      font-weight: bold;
-      font-size: medium;
-      border-color:#0dffd7;
-    }
     .content {
       padding: 40px 10%;
       font-size: 18px;
-      text-align: left;
-      
-    }
-    form select{
-      width: 30%;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      font-size: medium;
-      border-radius: 10px;
-    } 
-    form button {
-      font-weight: 200;
-      background-color:#eb211a;
-      color: #f4f6ec;
-      border: none;
-      cursor: pointer;
-      border-radius: 20px;
-      width: 25%;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      font-size: medium;
-    }
-    form button:hover {
-      background: #0843c1;
-      color: #ffffff;
     }
     .username {
       font-size: 28px;
@@ -174,58 +134,6 @@
       text-align: center;
       font-size: 18px;
     }
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 10;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(37, 33, 33, 0.5);
-    }
-
-    .modal-content {
-      background: linear-gradient(to right, #0af3cc, #108feb);
-      margin: 10% auto;
-      padding: 20px;
-      width: 300px;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .modal-content input {
-      width: 90%;
-      margin: 8px 0;
-      padding: 8px;
-    }
-
-    .modal-content button {
-      padding: 8px 12px;
-      margin: 8px;
-      background-color: #84f180;
-      color: rgb(31, 28, 28);
-      border: none;
-      cursor: pointer;
-    }
-
-    .modal-content button:hover {
-      background-color: #e7eb0a;
-    }
-    .animated-text {
-      animation: pulse 2s infinite;
-      font-family: 'Times New Roman', Times, serif;
-      text-align: center;
-
-}
-
-@keyframes pulse {
-   0% {opacity: 0.5;}
-  50% {opacity: 1;}
-  100% {opacity: 0.5;}
-}
-    
     #overlay {
       display: none;
       position: fixed;
@@ -233,6 +141,29 @@
       width: 100vw; height: 100vh;
       background: rgba(0, 0, 0, 0.4);
       z-index: 9998;
+    }
+    form select{
+      width: 30%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: medium;
+      border-radius: 10px;
+    } 
+    form button {
+      font-weight: 200;
+      background-color:#eb211a;
+      color: #f4f6ec;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      width: 25%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: medium;
+    }
+    form button:hover {
+      background: #0843c1;
+      color: #ffffff;
     }
     h1{
       text-align: center;
@@ -267,37 +198,27 @@
       font-size: 19px;
     }
      @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px;
-  }
-  .navbar a, .dropdown .dropbtn {
-    width: 100%;
-    display: block;
-    text-align: left;
-  }
-}
-  
+      .navbar {
+        flex-direction: column;
+      }
+      .footer-left, .footer-right {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+      }
+    }
   </style>
-  <script>
-  if (performance.navigation.type === 1) {
-    window.location.href = "dashboard.html";
-  }
-</script>
 </head>
 <body>
-
   <header>
     <div class="profile-btn" id="profileBtn">U</div>
     <strong><h1>📘 STUDY MATERIAL</h1>
       <p><h2>This website is only for Chemical Engineering Students</h2></p></strong>
   </header>
-
   <nav>
 <div class="navbar">
   <a href="dashboard.html">HOME</a>
   <a href="about.html">ABOUT US</a>
-  
   <div class="dropdown">
     <button class="dropbtn">SERVICES ▼</button>
     <div class="dropdown-content">
@@ -309,7 +230,6 @@
       <a href="https://www.ugierkl.ac.in/placement_notice.php"target="_blank">Placement Notice</a>
     </div>
   </div>
-
   <div class="dropdown">
     <button class="dropbtn">MATERIALS ▼</button>
     <div class="dropdown-content">
@@ -322,11 +242,8 @@
     </div>
   </div>
       <a href="contact-us.html">CONTACT US</a>
-      <button class="logout-btn" onclick="logout()">LOGOUT</button>
 </div>
 </nav>
-
-
  <div class="content">
     <div class="username">Welcome,<span id="userName">User</span> to the UGIE-Notes Section. ! 👋</div>
 <main class="content">
@@ -342,17 +259,14 @@
         <option value="sem5">5th Semester</option>
         <option value="sem6">6th Semester</option>
       </select><br /><br />
-
       <label for="subject"><b>Subject:</b></label><br />
       <select id="subject" required>
         <option value="">--Select Subject--</option>
       </select><br /><br />
-
       <button type="submit">Submit</button>
     </form>
   </main>
   </div>
-
    <footer>
     <div class="footer-left">
       <p><a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"/></a></p><br/>
@@ -375,62 +289,59 @@
   Contact: tusharsharma89372@gmail.com<br/>
   © 2025 Study Material Tushar | All rights reserved. Designed & Developed by Tushar
 </div>
-
-
-  <!-- Profile Modal -->
-  <div class="modal" id="profileModal">
-    <div class="modal-content">
-      <h3>User Profile</h3>
-      <input type="text" id="nameInput" disabled />
-      <input type="email" id="emailInput" disabled />
-      <button id="editBtn">Edit</button>
-      <button id="saveBtn" style="display:none;">Save</button>
-    </div>
-  </div>
-
   <script>
     
     // Subject options by semester
     const semesterSubjects = {
-      sem1: [" ", " ", " ", " ", " "],
-      sem2: [" ", " ", " ", " ", " "],
-      sem3: [" ", " ", " ", " ", " "],
-      sem4: [" ", " ", " ", " ", " "],
-      sem5: [" ", " ", " ", " ", " "],
-      sem6: [" ", " ", " "," ", " ",]
+      sem1: ["English", "Applied Physics-I", "Mathematics-I", "Electrical & Electronics", "Environmental Science"],
+      sem2: ["Computer Application", "Applied Physics-II", "Mathematics-II", "Engineering Mechanics", "Applied Chemistry"],
+      sem3: ["Physical Chemistry", "Fluid Mechanics", "Mechanical Operation", "Industrial Stochiometry", "EVS"],
+      sem4: ["Organic Chemistry", "Heat Transfer", "Mass Transfer-I", "Chemical Processing Industries-I"],
+      sem5: ["EMST", "Mass Transfer-II", "Chemical Processing Industries-II", "Chemical Engineering Thermodynamics", "Instrumentation & Chemical Analysis"],
+      sem6: ["Plant Safety Management", "Chemical Reaction Engineering", "Petroleum Refining & Petrochemical TechnologY","Nobel Separation Process"]
     };
 
     // PDF Links for subjects
     const pdfLinks = {
       sem1: {
-        Chemistry: "https://drive.google.com/sem1-chemistry",
-        Math: "https://drive.google.com/sem1-math",
-        Physics: "https://drive.google.com/sem1-physics"
+        "English": "https://drive.google.com/file/d/1YUCB1bpA5kgCy5Hk-vDzj0LzmqJUQbRB/view?usp=drive_link",
+        "Applied Physics-I": "https://drive.google.com/file/d/1HwkzKWy1GNbd_5yAiGI1_ls4YvyqFjhB/view?usp=drive_link",
+        "Mathematics-I": "https://drive.google.com/file/d/1Ec2R8EflIZwVHZanzPawYOvJxCEM2DE1/view?usp=drive_link",
+        "Electrical & Electronics": "https://drive.google.com/sem1-physics",
+        "Environmental Science": "https://drive.google.com/sem1-physics"
       },
       sem2: {
-        "Applied Chemistry": "https://drive.google.com/sem2-applied-chemistry",
-        "Engineering Drawing": "https://drive.google.com/sem2-drawing",
-        "Communication Skills": "https://drive.google.com/sem2-communication"
-      },
+        "Computer Application": "https://drive.google.com/file/d/1bV-0lU3XHM7VY6pQ3BsX3FJ0fxS935ut/view?usp=drive_link",
+        "Applied Physics-II": "https://drive.google.com/file/d/1HwkzKWy1GNbd_5yAiGI1_ls4YvyqFjhB/view?usp=drive_link",
+        "Mathematics-II": "https://drive.google.com/file/d/1LvROTf-BOS8DVS6GIMVIfqpOrPxmdb7_/view?usp=drive_link",
+        "Engineering Mechanics": "https://drive.google.com/file/d/1e946leA-a6KjY4hPjD6hJD8Pjt7b8-AA/view?usp=drive_link",
+        "Applied Chemistry": "https://drive.google.com/file/d/1zTSjVSg-aUqZ0Ifu-0_cCqMq8wkzEW_l/view?usp=drive_link"
+        },
       sem3: {
-        "Mechanical Operations": "https://drive.google.com/sem3-mech-ops",
-        "Fluid Flow": "https://drive.google.com/sem3-fluid",
-        "Chemical Process Calculations": "https://drive.google.com/sem3-cpc"
-      },
+        "Physical Chemistry": "https://drive.google.com/file/d/1DR-HbSuO-EUHCV2preH1bERHxN7C_U5q/view?usp=drive_link",
+        "Fluid Mechanics": "https://drive.google.com/file/d/1o4LEj6yknkmjD-RjLCIk7ICXRJeFV9hE/view?usp=drive_link",
+        "Mechanical Operation": "https://drive.google.com/file/d/1kCV7fHn3b24g8Yrfduawu1v3sBAazIZ6/view?usp=drive_link",
+        "Industrial Stochiometry": "https://drive.google.com/file/d/1Kl2UttsoGjetKQz90Suy7N2lPMGr0qdh/view?usp=drive_link",
+        "EVS": "https://drive.google.com/file/d/17hqQXv7_pWENthHJxl46hltExxT-oWaz/view?usp=drive_link"
+        },
       sem4: {
-        "Heat Transfer": "https://drive.google.com/sem4-ht",
-        "Instrumentation": "https://drive.google.com/sem4-instrumentation",
-        "Material Technology": "https://drive.google.com/sem4-material"
-      },
+        "Organic Chemistry": "https://drive.google.com/file/d/1M-_u-KPpzhhCzQP81WI9ouuCKMAjOe2n/view?usp=drive_link",
+        "Heat Transfer": "https://drive.google.com/file/d/1cE-063hll8NRM_vK3AP_gwsNPUMDVNEm/view?usp=drive_link",
+        "Mass Transfer-I": "https://drive.google.com/file/d/1nOGNPMpcFa2h51rK-Rv_bjx9Fd7RXaPL/view?usp=drive_link",
+        "Chemical Processing Industries-I": "https://drive.google.com/file/d/1nHCyeodC39OigcWs23PcyOtWW7kd0oeR/view?usp=drive_link"
+        },
       sem5: {
-        "CRE": "https://drive.google.com/sem5-cre",
-        "Petroleum": "https://drive.google.com/sem5-petro",
-        "Mass Transfer-I": "https://drive.google.com/sem5-mt1"
+        "EMST": "https://drive.google.com/file/d/1QeExIjkc7FaYw_WTn69ktA2aCcSonry9/view?usp=drive_link",
+        "Mass Transfer-II": "https://drive.google.com/file/d/1AEZ2tO4dxNzt-Lmz6bEQxSul_UdiTTLG/view?usp=drive_link",
+        "Chemical Processing Industries-II": "https://drive.google.com/file/d/1pppZdVtsQWYpYZ9kUvaJsiqpi5coKIgn/view?usp=drive_link",
+        "Chemical Engineering Thermodynamics": "https://drive.google.com/file/d/10YUd0L13beoMxblCyr86Xgfx09VhROgx/view?usp=drive_link",
+        "Instrumentation & Chemical Analysis": "https://drive.google.com/file/d/1L-sieMpmanBiallMX9GuuI5O8wOtrSkw/view?usp=drive_link"
       },
       sem6: {
-        "NST": "https://drive.google.com/sem6-nst",
-        "Mass Transfer-II": "https://drive.google.com/sem6-mt2",
-        "Project Work": "https://drive.google.com/sem6-project"
+        "Plant Safety Management": "https://drive.google.com/file/d/1K5mH6GU-UqgbHO8EA3qvhPAlcHF-OxVk/view?usp=drive_link",
+        "Chemical Reaction Engineering": "https://drive.google.com/file/d/1bcKtk8NLs1ngxNl4XZRiY5o9Y7XBefcl/view?usp=drive_link",
+        "Petroleum Refining & Petrochemical Technology": "https://drive.google.com/file/d/1uYfOz338ufGD48uGAvsjTBcd4ogRMn9Z/view?usp=drive_link",
+        "Nobel Separation Technology": "https://drive.google.com/file/d/11VhQEdPisl0QWw91iN-cXhaUu0mctZxM/view?usp=drive_link"
       }
     };
 
@@ -458,7 +369,7 @@
       const pdfLink = pdfLinks[semester]?.[subject];
 
       if (pdfLink) {
-        window.open(pdfLink, "_blank");
+        window.open(pdfLink, target="_blank");
       } else {
         alert("PDF link not available for this selection.");
       }
@@ -472,38 +383,9 @@
     const emailInput = document.getElementById("emailInput");
     const editBtn = document.getElementById("editBtn");
     const saveBtn = document.getElementById("saveBtn");
-
-    document.getElementById("profileBtn").addEventListener("click", () => {
-      nameInput.value = userData.name;
-      emailInput.value = userData.email;
-      modal.style.display = "block";
-    });
-
-    editBtn.onclick = () => {
-      nameInput.disabled = false;
-      emailInput.disabled = false;
-      saveBtn.style.display = "inline-block";
-      editBtn.style.display = "none";
-    };
-
-    saveBtn.onclick = () => {
-      const updatedName = nameInput.value;
-      const updatedEmail = emailInput.value;
-      localStorage.setItem("loggedInUser", JSON.stringify({ name: updatedName, email: updatedEmail }));
-      document.getElementById("userName").textContent = updatedName;
-      document.getElementById("profileBtn").textContent = updatedName.charAt(0).toUpperCase();
-      modal.style.display = "none";
-    };
-
-    window.onclick = (e) => {
-      if (e.target == modal) modal.style.display = "none";
-    }
-
-    function logout() {
-      // Do not clear localStorage so data remains saved
-      window.location.href = "index.html";
-    }
   </script>
 
 </body>
 </html>
+
+
