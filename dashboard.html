@@ -14,6 +14,9 @@
     body {
       background: linear-gradient(to top, #9869cb, #805fd3, #4c75cf, #61db61, #dfdf66, #e3b867, #c45656);
       color: #333;
+      background-size: cover;        
+      background-repeat: no-repeat;  
+      background-position: center; 
     }
 
     header {
@@ -241,17 +244,24 @@
       line-height: 1.8;
       font-size: 19px;
     }
-     @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px;
-  }
-  .navbar a, .dropdown .dropbtn {
-    width: 100%;
-    display: block;
-    text-align: left;
-  }
-}
+    @media (min-width: 768px) {
+      .header{
+        text-align: center;
+        width:100%;
+      }
+      .navbar{
+        text-align: center;
+        width:100%;
+      }
+      .footer{
+        text-align: center;
+        width:100%;
+      }
+      .content{
+        text-align: center;
+        width:100%;
+      }
+    }
   
   </style>
   <script>
