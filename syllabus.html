@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Study Material Tushar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Study Material Tushar</title>
   <style>
     * {
       margin: 0;
@@ -15,11 +15,10 @@
       background: linear-gradient(to top, #9869cb, #805fd3, #4c75cf, #61db61, #dfdf66, #e3b867, #c45656);
       color: #333;
     }
-
     header {
       background: linear-gradient(to right, #d6e96e, #e11d41);
       padding: 20px;
-      color: rgb(255, 255, 255);
+      color: white;
       font-size: 2em;
       font-weight: bold;
       display: flex;
@@ -81,7 +80,7 @@
       display: none;
       position: absolute;
       background-color: white;
-      min-width: 160px;
+      min-width: 10%;
       box-shadow: 0px 8px 16px rgba(0,0,0,0.8);
       z-index: 1;
     }
@@ -99,48 +98,9 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
-    .logout-btn {
-      color: rgb(45, 31, 243);
-      cursor: pointer;
-      padding: 12px 5%;
-      text-decoration: none;
-      text-align: center;
-      font-weight: bold;
-      border-radius: 20px;
-      background: linear-gradient(to right, #a7ec66, #eab866);
-      float: right;
-      font-weight: bold;
-      font-size: medium;
-      border-color:#0dffd7;
-    }
     .content {
       padding: 40px 10%;
       font-size: 18px;
-      text-align: left;
-      
-    }
-    form select{
-      width: 30%;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      font-size: medium;
-      border-radius: 10px;
-    } 
-    form button {
-      font-weight: 200;
-      background-color:#eb211a;
-      color: #f4f6ec;
-      border: none;
-      cursor: pointer;
-      border-radius: 20px;
-      width: 25%;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      font-size: medium;
-    }
-    form button:hover {
-      background: #0843c1;
-      color: #ffffff;
     }
     .username {
       font-size: 28px;
@@ -174,58 +134,6 @@
       text-align: center;
       font-size: 18px;
     }
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 10;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(37, 33, 33, 0.5);
-    }
-
-    .modal-content {
-      background: linear-gradient(to right, #0af3cc, #108feb);
-      margin: 10% auto;
-      padding: 20px;
-      width: 300px;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .modal-content input {
-      width: 90%;
-      margin: 8px 0;
-      padding: 8px;
-    }
-
-    .modal-content button {
-      padding: 8px 12px;
-      margin: 8px;
-      background-color: #84f180;
-      color: rgb(31, 28, 28);
-      border: none;
-      cursor: pointer;
-    }
-
-    .modal-content button:hover {
-      background-color: #e7eb0a;
-    }
-    .animated-text {
-      animation: pulse 2s infinite;
-      font-family: 'Times New Roman', Times, serif;
-      text-align: center;
-
-}
-
-@keyframes pulse {
-   0% {opacity: 0.5;}
-  50% {opacity: 1;}
-  100% {opacity: 0.5;}
-}
-    
     #overlay {
       display: none;
       position: fixed;
@@ -233,6 +141,29 @@
       width: 100vw; height: 100vh;
       background: rgba(0, 0, 0, 0.4);
       z-index: 9998;
+    }
+    form select{
+      width: 30%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: medium;
+      border-radius: 10px;
+    } 
+    form button {
+      font-weight: 200;
+      background-color:#eb211a;
+      color: #f4f6ec;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      width: 25%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: medium;
+    }
+    form button:hover {
+      background: #0843c1;
+      color: #ffffff;
     }
     h1{
       text-align: center;
@@ -266,27 +197,28 @@
       line-height: 1.8;
       font-size: 19px;
     }
-     
+     @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+      .footer-left, .footer-right {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+      }
+    }
   </style>
-  <script>
-  if (performance.navigation.type === 1) {
-    window.location.href = "dashboard.html";
-  }
-</script>
 </head>
 <body>
-
   <header>
     <div class="profile-btn" id="profileBtn">U</div>
     <strong><h1>📘 STUDY MATERIAL</h1>
       <p><h2>This website is only for Chemical Engineering Students</h2></p></strong>
   </header>
-
   <nav>
 <div class="navbar">
   <a href="dashboard.html">HOME</a>
   <a href="about.html">ABOUT US</a>
-  
   <div class="dropdown">
     <button class="dropbtn">SERVICES ▼</button>
     <div class="dropdown-content">
@@ -298,7 +230,6 @@
       <a href="https://www.ugierkl.ac.in/placement_notice.php"target="_blank">Placement Notice</a>
     </div>
   </div>
-
   <div class="dropdown">
     <button class="dropbtn">MATERIALS ▼</button>
     <div class="dropdown-content">
@@ -311,11 +242,8 @@
     </div>
   </div>
       <a href="contact-us.html">CONTACT US</a>
-      <button class="logout-btn" onclick="logout()">LOGOUT</button>
 </div>
 </nav>
-
-
  <div class="content">
     <div class="username">Welcome,<span id="userName">User</span> to the Syllabus Section. ! 👋</div>
 <main class="content">
@@ -331,13 +259,10 @@
         <option value="sem5">5th Semester</option>
         <option value="sem6">6th Semester</option>
       </select><br /><br />
-
-     
       <button type="submit">Submit</button>
     </form>
   </main>
   </div>
-
    <footer>
     <div class="footer-left">
       <p><a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"/></a></p><br/>
@@ -360,19 +285,6 @@
   Contact: tusharsharma89372@gmail.com<br/>
   © 2025 Study Material Tushar | All rights reserved. Designed & Developed by Tushar
 </div>
-
-
-  <!-- Profile Modal -->
-  <div class="modal" id="profileModal">
-    <div class="modal-content">
-      <h3>User Profile</h3>
-      <input type="text" id="nameInput" disabled />
-      <input type="email" id="emailInput" disabled />
-      <button id="editBtn">Edit</button>
-      <button id="saveBtn" style="display:none;">Save</button>
-    </div>
-  </div>
-
   <script>
     document.getElementById('notesForm').addEventListener('submit', function (event) {
     event.preventDefault(); // form submit rokta hai
@@ -380,12 +292,12 @@
 
     // Semester wise PDF links
     var pdfLinks = {
-      sem1: 'https://drive.google.com/file/d/1f1T5JyNY6QcaxAhvOIwvlBcwpim19vkr/view?usp=drive_link',
-      sem2: 'https://drive.google.com/file/d/1f1T5JyNY6QcaxAhvOIwvlBcwpim19vkr/view?usp=drive_link',
-      sem3: 'https://drive.google.com/file/d/1f1T5JyNY6QcaxAhvOIwvlBcwpim19vkr/view?usp=drive_link',
-      sem4: 'https://drive.google.com/file/d/1f1T5JyNY6QcaxAhvOIwvlBcwpim19vkr/view?usp=drive_link',
-      sem5: 'https://drive.google.com/file/d/1f1T5JyNY6QcaxAhvOIwvlBcwpim19vkr/view?usp=drive_link',
-      sem6: 'https://drive.google.com/file/d/1f1T5JyNY6QcaxAhvOIwvlBcwpim19vkr/view?usp=drive_link'
+      sem1: 'https://drive.google.com/file/d/1ItaCix0icsmn4VzVCsXfWN3W6hn6HqQD/view?usp=drive_link',
+      sem2: 'https://drive.google.com/file/d/1ItaCix0icsmn4VzVCsXfWN3W6hn6HqQD/view?usp=drive_link',
+      sem3: 'https://drive.google.com/file/d/1vNYuXH1HUdh6DWOdLoQk0HtbH0EVmk9e/view?usp=drive_link',
+      sem4: 'https://drive.google.com/file/d/1OHUoJr7gGzUSWKmbAfqWkwZm6MppdhOb/view?usp=drive_link',
+      sem5: 'https://drive.google.com/file/d/13B3NGDqPzZ0GO8m1vMBLhRZ0Hnr0jolX/view?usp=drive_link',
+      sem6: 'https://drive.google.com/file/d/1yg7qGf67EKbw4voxxikZJuXCnQVa9WjE/view?usp=drive_link'
     };
 
     if (pdfLinks[semester]) {
@@ -403,38 +315,8 @@
     const emailInput = document.getElementById("emailInput");
     const editBtn = document.getElementById("editBtn");
     const saveBtn = document.getElementById("saveBtn");
-
-    document.getElementById("profileBtn").addEventListener("click", () => {
-      nameInput.value = userData.name;
-      emailInput.value = userData.email;
-      modal.style.display = "block";
-    });
-
-    editBtn.onclick = () => {
-      nameInput.disabled = false;
-      emailInput.disabled = false;
-      saveBtn.style.display = "inline-block";
-      editBtn.style.display = "none";
-    };
-
-    saveBtn.onclick = () => {
-      const updatedName = nameInput.value;
-      const updatedEmail = emailInput.value;
-      localStorage.setItem("loggedInUser", JSON.stringify({ name: updatedName, email: updatedEmail }));
-      document.getElementById("userName").textContent = updatedName;
-      document.getElementById("profileBtn").textContent = updatedName.charAt(0).toUpperCase();
-      modal.style.display = "none";
-    };
-
-    window.onclick = (e) => {
-      if (e.target == modal) modal.style.display = "none";
-    }
-
-    function logout() {
-      // Do not clear localStorage so data remains saved
-      window.location.href = "index.html";
-    }
   </script>
 
 </body>
 </html>
+
