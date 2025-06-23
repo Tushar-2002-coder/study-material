@@ -15,7 +15,6 @@
       background: linear-gradient(to top, #9869cb, #805fd3, #4c75cf, #61db61, #dfdf66, #e3b867, #c45656);
       color: #333;
     }
-
     header {
       background: linear-gradient(to right, #d6e96e, #e11d41);
       padding: 20px;
@@ -81,7 +80,7 @@
       display: none;
       position: absolute;
       background-color: white;
-      min-width: 160px;
+      min-width: 10%;
       box-shadow: 0px 8px 16px rgba(0,0,0,0.8);
       z-index: 1;
     }
@@ -98,20 +97,6 @@
     }
     .dropdown:hover .dropdown-content {
       display: block;
-    }
-    .logout-btn {
-      color: rgb(45, 31, 243);
-      cursor: pointer;
-      padding: 12px 5%;
-      text-decoration: none;
-      text-align: center;
-      font-weight: bold;
-      border-radius: 20px;
-      background: linear-gradient(to right, #a7ec66, #eab866);
-      float: right;
-      font-weight: bold;
-      font-size: medium;
-      border-color:#0dffd7;
     }
     .content {
       padding: 40px 10%;
@@ -149,58 +134,6 @@
       text-align: center;
       font-size: 18px;
     }
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 10;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(37, 33, 33, 0.5);
-    }
-
-    .modal-content {
-      background: linear-gradient(to right, #0af3cc, #108feb);
-      margin: 10% auto;
-      padding: 20px;
-      width: 300px;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .modal-content input {
-      width: 90%;
-      margin: 8px 0;
-      padding: 8px;
-    }
-
-    .modal-content button {
-      padding: 8px 12px;
-      margin: 8px;
-      background-color: #84f180;
-      color: rgb(31, 28, 28);
-      border: none;
-      cursor: pointer;
-    }
-
-    .modal-content button:hover {
-      background-color: #e7eb0a;
-    }
-    .animated-text {
-      animation: pulse 5s infinite;
-      font-family: 'Times New Roman', Times, serif;
-      text-align: center;
-
-}
-
-@keyframes pulse {
-  0% {opacity: 0.5;}
-  50% {opacity: 1;}
-  100% {opacity: 0.5;}
-}
-    
     #overlay {
       display: none;
       position: fixed;
@@ -209,7 +142,6 @@
       background: rgba(0, 0, 0, 0.4);
       z-index: 9998;
     }
-    
     h1{
       text-align: center;
       color: #081c7e;
@@ -239,14 +171,17 @@
       font-family: 'Times New Roman', Times, serif;
       font-size: 28px;
     }
-    
-
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+      .footer-left, .footer-right {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+      }
+    }
   </style>
-  <script>
-  if (performance.navigation.type === 1) {
-    window.location.href = "dashboard.html";
-  }
-</script>
 </head>
 <body>
 
@@ -255,12 +190,10 @@
     <strong><h1>📘 STUDY MATERIAL</h1>
       <p><h2>This website is only for Chemical Engineering Students</h2></p></strong>
   </header>
-
   <nav>
 <div class="navbar">
   <a href="dashboard.html">HOME</a>
   <a href="about.html">ABOUT US</a>
-  
   <div class="dropdown">
     <button class="dropbtn">SERVICES ▼</button>
     <div class="dropdown-content">
@@ -272,7 +205,6 @@
       <a href="https://www.ugierkl.ac.in/placement_notice.php"target="_blank">Placement Notice</a>
     </div>
   </div>
-
   <div class="dropdown">
     <button class="dropbtn">MATERIALS ▼</button>
     <div class="dropdown-content">
@@ -285,10 +217,8 @@
     </div>
   </div>
       <a href="contact-us.html">CONTACT US</a>
-      <button class="logout-btn" onclick="logout()">LOGOUT</button>
 </div>
 </nav>
-
   <div class="content">
      <div class="username">Welcome,<span id="userName">User</span> to the About section. ! 👋</div>
     <h3 class="animated-text">Diploma in Chemical Engineering Resource Portal</h3><br/><br/>
@@ -360,17 +290,6 @@
   © 2025 Study Material Tushar | All rights reserved. Designed & Developed by Tushar
 </div>
 
-  <!-- Profile Modal -->
-  <div class="modal" id="profileModal">
-    <div class="modal-content">
-      <h3>User Profile</h3>
-      <input type="text" id="nameInput" disabled />
-      <input type="email" id="emailInput" disabled />
-      <button id="editBtn">Edit</button>
-      <button id="saveBtn" style="display:none;">Save</button>
-    </div>
-  </div>
-
   <script>
     const userData = JSON.parse(localStorage.getItem("loggedInUser")) || { name: "User", email: "demo@gmail.com" };
     document.getElementById("userName").textContent = userData.name;
@@ -381,37 +300,8 @@
     const emailInput = document.getElementById("emailInput");
     const editBtn = document.getElementById("editBtn");
     const saveBtn = document.getElementById("saveBtn");
-
-    document.getElementById("profileBtn").addEventListener("click", () => {
-      nameInput.value = userData.name;
-      emailInput.value = userData.email;
-      modal.style.display = "block";
-    });
-
-    editBtn.onclick = () => {
-      nameInput.disabled = false;
-      emailInput.disabled = false;
-      saveBtn.style.display = "inline-block";
-      editBtn.style.display = "none";
-    };
-
-    saveBtn.onclick = () => {
-      const updatedName = nameInput.value;
-      const updatedEmail = emailInput.value;
-      localStorage.setItem("loggedInUser", JSON.stringify({ name: updatedName, email: updatedEmail }));
-      document.getElementById("userName").textContent = updatedName;
-      document.getElementById("profileBtn").textContent = updatedName.charAt(0).toUpperCase();
-      modal.style.display = "none";
-    };
-
-    window.onclick = (e) => {
-      if (e.target == modal) modal.style.display = "none";
-    }
-
-    function logout() {
-      // Do not clear localStorage so data remains saved
-      window.location.href = "index.html";
-    }
   </script>
+
 </body>
 </html>
+
