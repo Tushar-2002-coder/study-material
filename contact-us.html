@@ -15,7 +15,6 @@
       background: linear-gradient(to top, #9869cb, #805fd3, #4c75cf, #61db61, #dfdf66, #e3b867, #c45656);
       color: #333;
     }
-
     header {
       background: linear-gradient(to right, #d6e96e, #e11d41);
       padding: 20px;
@@ -99,20 +98,6 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
-    .logout-btn {
-      color: rgb(45, 31, 243);
-      cursor: pointer;
-      padding: 12px 5%;
-      text-decoration: none;
-      text-align: center;
-      font-weight: bold;
-      border-radius: 20px;
-      background: linear-gradient(to right, #a7ec66, #eab866);
-      float: right;
-      font-weight: bold;
-      font-size: medium;
-      border-color:#0dffd7;
-    }
     .content {
       padding: 40px 10%;
       font-size: 18px;
@@ -132,13 +117,11 @@
       margin-top: 40px;
       color: #ffffff;
     }
-
     .footer-left a {
       margin-right: 99px;
       text-decoration: none;
       color: rgb(243, 32, 32);
     }
-    
     .box {
       width: 40%;
       height: 40%;
@@ -149,58 +132,6 @@
       text-align: center;
       font-size: 18px;
     }
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 10;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(37, 33, 33, 0.5);
-    }
-
-    .modal-content {
-      background: linear-gradient(to right, #0af3cc, #108feb);
-      margin: 10% auto;
-      padding: 20px;
-      width: 20%;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .modal-content input {
-      width: 90%;
-      margin: 8px 0;
-      padding: 8px;
-    }
-
-    .modal-content button {
-      padding: 8px 12px;
-      margin: 8px;
-      background-color: #84f180;
-      color: rgb(31, 28, 28);
-      border: none;
-      cursor: pointer;
-    }
-
-    .modal-content button:hover {
-      background-color: #e7eb0a;
-    }
-    .animated-text {
-      animation: pulse 5s infinite;
-      font-family: 'Times New Roman', Times, serif;
-      text-align: center;
-
-}
-
-@keyframes pulse {
-  0% {opacity: 0.5;}
-  50% {opacity: 1;}
-  100% {opacity: 0.5;}
-}
-    
     #overlay {
       display: none;
       position: fixed;
@@ -210,9 +141,7 @@
       background: rgba(0, 0, 0, 0.4);
       z-index: 9998;
     }
-     
-
-    .help-message {
+     .help-message {
       color: #d6b71b;
       padding: 15px 20px;
       text-align: center;
@@ -249,22 +178,11 @@
       margin-bottom: 15px;
     }
     .contact-info {
-      
       color: #ccc60a;
       text-align: center;
       padding: 10px 20px 20px;
       font-size: 16px;
       line-height: 1.9;
-    }
-    /*help email sent box*/
-    section {
-      max-width: 80%;
-      padding: 30px;
-      margin: 20px 99px 30px 0;
-      box-shadow: 0 0 30px #50ea1d;
-      border-radius: 50px;
-      color: #cee80e;
-      height:450px;
     }
     h1{
       text-align: center;
@@ -283,50 +201,38 @@
       color: #a7e6aa;
       font-family: 'Times New Roman', Times, serif;
     }
-
-    
+    form {
+      background: linear-gradient(to bottom, #ef7878, #e7a936, #f3f352, #7fed7f);
+      padding: 20px;
+      border-radius: 10px;
+      width: 75%;
+      max-width: 500px;
+      margin: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      color: rgb(0, 0, 0);
+    }
     label {
       display: block;
-      margin-top: 15px;
-      font-weight: bold;
+      margin-top: 10px;
     }
-    input{
-      height:3%;
-      width: 100%;
+    input, textarea {
+      width: 96%;
       padding: 10px;
       margin-top: 5px;
-      border-radius: 10px;
+      border-radius: 5px;
       border: 1px solid #ccc;
-      box-sizing: border-box;
-      font-size: 15px;
-    } 
-    textarea {
-      width: 100%;
-      height: 110px;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 20px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      font-size: 15px;
-    }
-    .button-group {
-      display: flex;
-      justify-content: space-between;
-      margin: 20px 110px;
     }
     button {
+      margin-top: 15px;
       padding: 10px 20px;
-      border: none;
-      font-size: 13.5px;
-      cursor: pointer;
-      border-radius: 50px;
-      background-color:#eb211a;
+      background: #007bff;
       color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
-    button:hover{
-        background-color: #dbf32a;
-        color:#000000;
+    button:hover {
+      background: #105197;
     }
     center{
       color:#f3f725;
@@ -335,7 +241,6 @@
       font-weight: bold;
       text-align: center;
     }
-   
     @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
@@ -346,27 +251,18 @@
         margin: 10px 0;
       }
     }
-
   </style>
-  <script>
-  if (performance.navigation.type === 1) {
-    window.location.href = "dashboard.html";
-  }
-</script>
 </head>
 <body>
-
  <header>
     <div class="profile-btn" id="profileBtn">U</div>
     <strong><h1>📘 STUDY MATERIAL</h1>
       <p><h2>This website is only for Chemical Engineering Students</h2></p></strong>
   </header>
-
   <nav>
 <div class="navbar">
   <a href="dashboard.html">HOME</a>
   <a href="about.html">ABOUT US</a>
-  
   <div class="dropdown">
     <button class="dropbtn">SERVICES ▼</button>
     <div class="dropdown-content">
@@ -378,7 +274,6 @@
       <a href="https://www.ugierkl.ac.in/placement_notice.php"target="_blank">Placement Notice</a>
     </div>
   </div>
-
   <div class="dropdown">
     <button class="dropbtn">MATERIALS ▼</button>
     <div class="dropdown-content">
@@ -391,10 +286,8 @@
     </div>
   </div>
       <a href="contact-us.html">CONTACT US</a>
-      <button class="logout-btn" onclick="logout()">LOGOUT</button>
 </div>
 </nav>
-
   <div class="content">
     <div class="username">Welcome,<span id="userName">User</span> to the help & feedback section. ! 👋</div>
     <center><p>Help & Feedback Section</p></center>
@@ -419,43 +312,28 @@
   <div class="help-message">
     Need any help? You can send your enquiry here.
   </div>
-
   <div class="contact-info">
     <p><strong>Email:</strong> studymaterial.tushar@gmail.com</p>
     <p><strong>Phone:</strong> +91-8260291705</p>
   </div>
   </div>
-
-  
-
   <footer>
     <div class="footer-left">
-      <section>
-    <h3>Send Us Your Feedback</h3>
-    <form action="https://getform.io/f/bronpjda" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="thankyou.html">
-
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Your Message:</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-
-      <div class="button-group">
-      <button type="submit" class="submit-btn">Submit</button>
-      
-    </div>
-  </section>
+      <form id="contact-form">
+    <h2>Send Us Your Feedback</h2>
+    <label for="name">Your Name:</label>
+    <input type="text" name="user_name" required>
+    <label for="email">Your Email:</label>
+    <input type="email" name="user_email" required>
+    <label for="message">Your Message:</label>
+    <textarea name="message" rows="6" required></textarea>
+    <button type="submit">Send</button>
+  </form>
   <br/>
     <p><a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"/></a>
       <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/></a>
       <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube"/></a></p><br/>
     </div>
-    
     <div class="footer-right">
       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Admin Contact</strong></p>
       <div class="box">
@@ -474,18 +352,26 @@
 </div>
 
 
-  <!-- Profile Modal -->
-  <div class="modal" id="profileModal">
-    <div class="modal-content">
-      <h3>User Profile</h3>
-      <input type="text" id="nameInput" disabled />
-      <input type="email" id="emailInput" disabled />
-      <button id="editBtn">Edit</button>
-      <button id="saveBtn" style="display:none;">Save</button>
-    </div>
-  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 
   <script>
+    // Replace with your EmailJS user ID
+    emailjs.init("9bvT4PwftxVZxOi3e"); 
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_jkw1zbd', 'template_cb1sxc7', this)
+        .then(function() {
+          alert('Message sent successfully!');
+          document.getElementById('contact-form').reset();
+        }, function(error) {
+          alert('Failed to send message: ' + JSON.stringify(error));
+        });
+    });
+
+
     const userData = JSON.parse(localStorage.getItem("loggedInUser")) || { name: "User", email: "demo@gmail.com" };
     document.getElementById("userName").textContent = userData.name;
     document.getElementById("profileBtn").textContent = userData.name.charAt(0).toUpperCase();
@@ -495,37 +381,6 @@
     const emailInput = document.getElementById("emailInput");
     const editBtn = document.getElementById("editBtn");
     const saveBtn = document.getElementById("saveBtn");
-
-    document.getElementById("profileBtn").addEventListener("click", () => {
-      nameInput.value = userData.name;
-      emailInput.value = userData.email;
-      modal.style.display = "block";
-    });
-
-    editBtn.onclick = () => {
-      nameInput.disabled = false;
-      emailInput.disabled = false;
-      saveBtn.style.display = "inline-block";
-      editBtn.style.display = "none";
-    };
-
-    saveBtn.onclick = () => {
-      const updatedName = nameInput.value;
-      const updatedEmail = emailInput.value;
-      localStorage.setItem("loggedInUser", JSON.stringify({ name: updatedName, email: updatedEmail }));
-      document.getElementById("userName").textContent = updatedName;
-      document.getElementById("profileBtn").textContent = updatedName.charAt(0).toUpperCase();
-      modal.style.display = "none";
-    };
-
-    window.onclick = (e) => {
-      if (e.target == modal) modal.style.display = "none";
-    }
-
-    function logout() {
-      // Do not clear localStorage so data remains saved
-      window.location.href = "index.html";
-    }
   </script>
 
 </body>
