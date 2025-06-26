@@ -126,7 +126,7 @@
       overflow: hidden;
       justify-content: space-between;
       align-items: center;
-      padding: 8px 10%;
+      padding: 8px 1%;
     }
     .navbar a {
       float: left;
@@ -183,42 +183,27 @@
       background: linear-gradient(to right, #342858a1, #214e51, #342858a1);
       display: flex;
       justify-content: space-between;
-      padding: 20px 10%;
+      padding: 20px 5%;
       margin-top: 40px;
       color: #ffffff;
+      font-size: 10px;
     }
 
     .footer-left a {
-      margin-right: 99px;
+      margin-left: 1%;
       text-decoration: none;
       color: rgb(243, 32, 32);
     }
-    
-    .box {
-      width: 200px;
-      height: 200px;
-      border: 2px solid #969292;
-      background-color: #dadada;
-      padding: 10px;
-      margin: 10px 150px;
-      text-align: center;
-      font-size: 18px;
-    }
-    .animated-text {
-      animation: pulse 2s infinite;
-      font-family: 'Times New Roman', Times, serif;
-      text-align: center;
-
-}
+  
 /*help email sent box*/
     section {
-      max-width: 600px;
+      max-width: 500px;
       padding: 30px;
       margin: 20px 99px 30px 0;
       box-shadow: 0 0 30px #50ea1d;
       border-radius: 50px;
       color: #cee80e;
-      height:500px;
+      height:450px;
     }
    
     label {
@@ -273,41 +258,50 @@
       text-align: center;
       color: #081c7e;
       font-family: 'Times New Roman', Times, serif;
-      font-size: 44px;
+      font-size: 28px;
     }
     h2{
       text-align: center;
       color: #184fdb;
       font-family: 'Times New Roman', Times, serif;
-      font-size: 20px;
+      font-size: 18px;
+    }
+    h3{
+      text-align: center;
+      color: #300a5f;
+      font-family: 'Times New Roman', Times, serif;
     }
     h4{
       text-align: center;
-      color: #c73838;
+      color: #181818;
       font-family: 'Times New Roman', Times, serif;
-      font-size: 20px;
-      margin-bottom: 20px;
     }
-    
-    @media (min-width: 768px) {
-      .header{
-        text-align: center;
-        width:100%;
-      }
-      .navbar{
-        text-align: center;
-        width:100%;
-      }
-      .footer{
-        text-align: center;
-        width:100%;
-      }
-      .content{
-        text-align: center;
-        width:100%;
-      }
+    h5{
+      text-align: left;
+      color: #1e1c1c;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 500;
+      line-height: 1.8;
+      font-size: 11px;
     }
-    
+    img{
+      width: 10%;
+      height: 10%;
+      object-fit: cover;
+      margin-left: 11%
+      
+    }
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .navbar a, .dropdown .dropbtn {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+      }
     
   </style>
 </head>
@@ -387,49 +381,74 @@
 <footer>
     <div class="footer-left">
       <section>
-    <h4>Send Us Your Feedback</h4>
-    <form action="https://getform.io/f/bronpjda" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="thankyou.html">
-
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Your Message:</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-
-      <div class="button-group">
-      <button type="submit" class="submit-btn">Submit</button>
-      
-    </div>
+    <h1>Send Us Your Feedback</h1>
+    <form id="contact-form">
+    <label for="name">Your Name:</label>
+    <input type="text" name="user_name" required>
+    <label for="email">Your Email:</label>
+    <input type="email" name="user_email" required>
+    <label for="message">Your Message:</label>
+    <textarea name="message" rows="6" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <br/>
   </section>
   <br/>
     <p><a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"/></a>
       <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/></a>
-      <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube"/></a></p><br/>
-    </div>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube"/></a></p>
+</div>
     
     <div class="footer-right">
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Admin Contact</strong></p>
-      <div class="box">
-      </div>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📍 Address: Plot No.- A/209, Shital nagar, BONDAMUNDA,</p>
-      <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rourkela (770032),</P>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUNDARGARH, ODISHA, INDIA</p>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📧 &nbsp;Email: studymaterial.tushar@gmail.com</p><br/>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📞 &nbsp;Phone: +91-8260291705</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Admin Contact</strong></p>
+      <br/><br/><br/><br/><br/><br/><br/>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📍 Address: Plot No.- A/209, Shital nagar, BONDAMUNDA,</p><br/>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rourkela (770032),</P><br/>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUNDARGARH, ODISHA, INDIA</p><br/>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📧 &nbsp;Email: studymaterial.tushar@gmail.com</p><br/>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📞 &nbsp;Phone: +91-8260291705</p><br/>
     </div>
       </footer>
       <!-- Second Footer (Bottom-most strip) -->
-<div style="color:#e5e5e5;background: linear-gradient(to right, #4e3030, #41461b); text-align: center; padding: 15px 0; font-size: 14px;">
+<div style="color:#e5e5e5;background: linear-gradient(to right, #4e3030, #41461b); text-align: center; padding: 10px 2%; font-size: 8px;">
   Contact: tusharsharma89372@gmail.com<br/>
   © 2025 Study Material Tushar | All rights reserved. Designed & Developed by Tushar
 </div>
 
-<script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+  <script>
+    // Replace with your EmailJS user ID
+    emailjs.init(" 9bvT4PwftxVZxOi3e"); 
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_fnzu2d6', 'template_nxgf168', this)
+        .then(function() {
+          alert('Message sent successfully!');
+          document.getElementById('contact-form').reset();
+        }, function(error) {
+          alert('Failed to send message: ' + JSON.stringify(error));
+        });
+    });
+
   function showLogin() {
     document.getElementById('loginBox').classList.remove('hidden');
     document.getElementById('registerBox').classList.add('hidden');
