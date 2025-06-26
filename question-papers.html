@@ -15,10 +15,11 @@
       background: linear-gradient(to top, #9869cb, #805fd3, #4c75cf, #61db61, #dfdf66, #e3b867, #c45656);
       color: #333;
     }
+
     header {
       background: linear-gradient(to right, #d6e96e, #e11d41);
       padding: 20px;
-      color: white;
+      color: rgb(255, 255, 255);
       font-size: 2em;
       font-weight: bold;
       display: flex;
@@ -29,7 +30,7 @@
     .profile-btn {
       position: absolute;
       right: 20px;
-      background-color: rgb(216, 216, 194);
+      background-color: rgb(190, 242, 20);
       color: #e40e0e;
       width: 40px;
       height: 40px;
@@ -45,7 +46,7 @@
       overflow: hidden;
       justify-content: space-between;
       align-items: center;
-      padding: 8px 10%;
+      padding: 8px 1%;
     }
     .navbar a {
       float: left;
@@ -80,7 +81,7 @@
       display: none;
       position: absolute;
       background-color: white;
-      min-width: 10%;
+      min-width: 160px;
       box-shadow: 0px 8px 16px rgba(0,0,0,0.8);
       z-index: 1;
     }
@@ -99,27 +100,28 @@
       display: block;
     }
     .content {
-      padding: 40px 10%;
+      padding: 1% 5%;
       font-size: 18px;
     }
     .username {
-      font-size: 28px;
+      font-size: 20px;
       color: #004d40;
       font-weight: bold;
       margin-bottom: 20px;
-      text-align: left;
+      text-align: center;
     }
     footer {
       background: linear-gradient(to right, #342858a1, #214e51, #342858a1);
       display: flex;
       justify-content: space-between;
-      padding: 30px 10%;
+      padding: 20px 5%;
       margin-top: 40px;
       color: #ffffff;
+      font-size: 10px;
     }
 
     .footer-left a {
-      margin-right: 10px;
+      margin-left: 80%;
       text-decoration: none;
       color: rgb(243, 32, 32);
     }
@@ -133,14 +135,6 @@
       margin: 10px 150px;
       text-align: center;
       font-size: 18px;
-    }
-    #overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 9998;
     }
     form select{
       width: 30%;
@@ -165,17 +159,25 @@
       background: #0843c1;
       color: #ffffff;
     }
+     #overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 9998;
+    }
     h1{
       text-align: center;
       color: #081c7e;
       font-family: 'Times New Roman', Times, serif;
-      font-size: 44px;
+      font-size: 28px;
     }
     h2{
       text-align: center;
       color: #184fdb;
       font-family: 'Times New Roman', Times, serif;
-      font-size: 20px;
+      font-size: 18px;
     }
     h3{
       text-align: center;
@@ -191,22 +193,31 @@
       text-align: left;
       color: #1e1c1c;
       font-family: 'Times New Roman', Times, serif;
-      font-weight: 420;
-      margin-left: 9%;
-      margin-right: 9%;
+      font-weight: 500;
       line-height: 1.8;
-      font-size: 19px;
+      font-size: 11px;
+    }
+    img{
+      width: 40%;
+      height: 40%;
+      object-fit: cover;
+
+    }
+    center{
+      font-size: small;
+      font-family: 'Times New Roman', Times, serif;
     }
      @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-      }
-      .footer-left, .footer-right {
-        width: 100%;
-        text-align: center;
-        margin: 10px 0;
-      }
-    }
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .navbar a, .dropdown .dropbtn {
+    width: 100%;
+    display: block;
+    text-align: left;
+  }
+}
   </style>
 </head>
 <body>
@@ -321,137 +332,104 @@
      
     },
     "Applied Physics-I": {
-      "2021": " ",
-      "2022": " ",
+      
       "2023": "https://drive.google.com/file/d/19nb0cJ12j4P5L2Va52qKMVeTwgvXFBY1/view?usp=drive_link",
-      "2024": " ",
-      "2025": " "
-    },
+     
     "Mathematics-I": {
-      "2021": " ",
+      
       "2022": "https://drive.google.com/file/d/1-8rf1hH9_MzgWcAirwj-3iZ73wSpO0xL/view?usp=drive_link",
-      "2023": " ",
-      "2024": " ",
-      "2025": " "
+      
     },
     "Electrical & Electronics": {
-      "2021": " ",
+      
       "2022": "https://drive.google.com/file/d/1MxaCQUIcyr-bTBOVbOLAhvVI0SJqavwz/view?usp=drive_link",
-      "2023": " ",
-      "2024": " ",
-      "2025": " "
+      
     },
     "Environmental Science": {
-      "2021": " ",
-      "2022": " ",
-      "2023": " ",
-      "2024": " ",
-      "2025": " "
+      
     }
   },
 
   sem2: {
     "Computer Application": {
-      "2021": " ",
-      "2022": " ",
+      
       "2023": "https://drive.google.com/file/d/1ERs_suBV-DWNLPAvUAKX6umaYNkRADXX/view?usp=drive_link",
-      "2024": " ",
-      "2025": " "
+      
     },
     "Applied Physics-II": {
-      "2021": " ",
-      "2022": " ",
-      "2023": " ",
-      "2024": " ",
-      "2025": " "
+      
     },
     "Mathematics-II": {
-      "2021": " ",
-      "2022": " ",
+      
       "2023": "https://drive.google.com/file/d/1o-cCZBLXyoVL-5KjZMWzr-zDdPDz12ww/view?usp=drive_link",
-      "2024": " ",
-      "2025": " "
+     
     },
     "Applied Chemistry": {
-      "2021": " ",
+     
       "2022": "https://drive.google.com/file/d/1qFDYoPy-pTqszy_J5kju0u260YjMhx_Z/view?usp=drive_link",
-      "2023": " ",
-      "2024": " ",
-      "2025": " "
+      
     },
     "Engineering Mechanics": {
-      "2021": " ",
-      "2022": " ",
+      
       "2023": "https://drive.google.com/file/d/1pjTe_prpnNzkxQmJqh4aChKJ-VrMn0XQ/view?usp=drive_link",
-      "2024": " ",
-      "2025": " "
+     
     }
   },
 
   sem3: {
     "Physical Chemistry": {
-      "2021": " ",
-      "2022": " ",
+      
       "2023": "https://drive.google.com/file/d/1Jn4hhkPsSNw85XdHD_1O8uuPK628ey3v/view?usp=drive_link",
       "2024": "https://drive.google.com/file/d/1GlHhFHMsocko2dCWgAgjdJm9VB8jdrBu/view?usp=drive_link",
-      "2025": " "
+      
     },
     "Fluid Mechanics": {
-      "2021": " ",
-      "2022": " ",
+      
       "2023": "https://drive.google.com/file/d/1dWaIAu9LfpyCHlYNWjaFG5LC3Il1RUem/view?usp=drive_link",
       "2024": "https://drive.google.com/file/d/1zs7d52b_WJe7jotSnpdrTnYfLjk6efWo/view?usp=drive_link",
-      "2025": " "
+      
     },
     "Mechanical Operation": {
-      "2021": " ",
-      "2022": " ",
+      
       "2023": "https://drive.google.com/file/d/1BJXJs42ol_LPUZyLNHGfz0zyEQiz9GIX/view?usp=drive_link",
       "2024": "https://drive.google.com/file/d/1TvJBtTBIIS1s4nOfZSaUnhwHVSFUq3VH/view?usp=drive_link",
-      "2025": " "
+      
     },
     "Industrial Stochiometry": {
-      "2021": " ",
-      "2022": " ",
+     
       "2023": "https://drive.google.com/file/d/1T7Bt5PA06YxI2wXRjqhwCHocYTbuBTFD/view?usp=drive_link",
       "2024": "https://drive.google.com/file/d/1aRE_ejwa_I__XTkq8VUJtplHun8otMjp/view?usp=drive_link",
-      "2025": " "
+     
     },
     "EVS": {
-      "2021": " ",
-      "2022": " ",
+      
       "2023": "https://drive.google.com/file/d/1zfFFl5agP8edv1AV0Kr0q6yH-DK8L2qk/view?usp=drive_link",
       "2024": "https://drive.google.com/file/d/1dR2bWKHCdIqQVQRI3exRYnu7eN-ijEoB/view?usp=drive_link",
-      "2025": " "
+      
     }
   },
 
   sem4: {
     "Organic Chemistry": {
-      "2021": " ",
+      
       "2022": "https://drive.google.com/file/d/1zg2lWCTBHJJef8nMmldhINgT_4f8nZca/view?usp=drive_link",
       "2023": "https://drive.google.com/file/d/1PKMbzjsM6CAVoANqht4qKXO0jid2KmEv/view?usp=drive_link",
       "2024": "https://drive.google.com/file/d/1aLvMTO-RJb7G0Hgv7ZCkft673iyNWsGO/view?usp=drive_link",
       "2025": "https://drive.google.com/file/d/1XmMGBfYqlocdF5KUtBQ8Zn5vIjdt009F/view?usp=drive_link"
     },
     "Heat Transfer": {
-      "2021": " ",
-      "2022": " ",
+    
       "2023": "https://drive.google.com/file/d/1bgJibLVmgN3wD7znwdNlLCdYaY2jDYDX/view?usp=drive_link",
       "2024": "https://drive.google.com/file/d/15H5MD-ihyjfPgqgsv_KbN21Sik3gYk-1/view?usp=drive_link",
       "2025": "https://drive.google.com/file/d/1QjzMIhzDPLGhN8xmMYe3m81FBhuR3pyZ/view?usp=drive_link"
     },
     "Mass Transfer-I": {
-      "2021": " ",
-      "2022": " ",
-      "2023": " ",
+     
       "2024": "https://drive.google.com/file/d/15l3NxEGVtQvvA-YP-tzcPA6nw8fPenQe/view?usp=drive_link",
       "2025": "https://drive.google.com/file/d/16WDWoxcn8GMDC8lRVuKI0TeHz9VoQA0E/view?usp=drive_link"
     },
     "Chemical Processing Industries-I": {
-      "2021": " ",
-      "2022": " ",
-      "2023": " ",
+     
       "2024": "https://drive.google.com/file/d/1bYj8RL9ILziz1dciMhqrA7CnG_Mb1EB7/view?usp=drive_link",
       "2025": "https://drive.google.com/file/d/1b4UsiSODP64D0SCsQ7cDzHlxrlYvOkFZ/view?usp=drive_link"
     }
@@ -459,70 +437,61 @@
 
   sem5: {
     "EMST": {
-      "2021": " ",
-      "2022": " ",
-      "2023": " ",
+     
       "2024": "https://drive.google.com/file/d/1ChbkUFvJggiVWgcOoEseZKbfAsyzi11d/view?usp=drive_link",
-      "2025": " "
+    
     },
     "Mass Transfer-II": {
       "2021": "https://drive.google.com/file/d/1RE4u-oERybjefiLYmSTsoUAPOdTJBwED/view?usp=drive_link",
       "2022": "https://drive.google.com/file/d/18JV_R9hJQNi0893DpnYMSDxLGZzGkjEz/view?usp=drive_link",
       "2023": "https://drive.google.com/file/d/1FWdVB9wE79QQcEWLzm4hrXmkk13X9KH3/view?usp=drive_link",
       "2024": "https://drive.google.com/file/d/1wbp-JW9D_caSlXkX81_YO8iIo8a7LqcH/view?usp=drive_link",
-      "2025": " "
+      
     },
     "Chemical Processing Industries-II": {
-      "2021": " ",
-      "2022": " ",
+     
       "2023": "https://drive.google.com/file/d/1-5Xb46UpUrHvkXtK_idWHZtsK-vmcHA9/view?usp=drive_link",
-      "2024": " ",
-      "2025": " "
+     
     },
     "Chemical Engineering Thermodynamics": {
-      "2021": " ",
-      "2022": " ",
-      "2023": " ",
+     
       "2024": "https://drive.google.com/file/d/1rXVYHDPiRg4vk4T49gaH51Wd5xDlCsiU/view?usp=drive_link",
-      "2025": " "
+      
     },
     "Instrumentation & Chemical Analysis": {
-      "2021": " ",
-      "2022": " ",
-      "2023": " ",
+   
       "2024": "https://drive.google.com/file/d/121ycACpXtEzTWawzGwtPi_K5WqASw6Ph/view?usp=drive_link",
-      "2025": " "
+    
     }
   },
 
   sem6: {
     "Plant Safety Management": {
-      "2021": " ",
+      
       "2022": " https://drive.google.com/file/d/1S5-_Xtwi7re7iiEzRMo-V8R4QxP3lkdB/view?usp=drive_link",
       "2023": "https://drive.google.com/file/d/1Ptc-j17ojpMUXBtWyBoXIx9Cbfvs7_N0/view?usp=drive_link",
       "2024": "https://drive.google.com/file/d/1OQk6mfgB_UV2ZyiVpBizEi2KNi2AegZc/view?usp=drive_link",
-      "2025": " "
+     
     },
     "Chemical Reaction Engineering": {
-      "2021": " ",
+     
       "2022": "https://drive.google.com/file/d/1i4Ce-_m-luOVFQ0QUorewvcYw5Uy3cIv/view?usp=drive_link",
       "2023": "https://drive.google.com/file/d/187Cko7HOEPjJHDjuqsHctzoALhv3MZoR/view?usp=drive_link",
       "2024": "https://drive.google.com/file/d/1vWHjQU7uoKeo1v7DiT4hKT1k4g6pBMM6/view?usp=drive_link",
-      "2025": " "
+      
     },
     "Petroleum Refining & Petrochemical Technology": {
-      "2021": " ",
+      
       "2022": "https://drive.google.com/file/d/189BSfJshktCrCb3H-mFq9EmEfOn93yCj/view?usp=drive_link",
       "2023": "https://drive.google.com/file/d/1PK2AKjiPn6mjT2nFcJdNnJIiKIbm-10X/view?usp=drive_link",
       "2024": "https://drive.google.com/file/d/1J0qbidSNEbv7C5EraKlv8o9fNxhQg4aA/view?usp=drive_link",
-      "2025": " "
+      
     },
     "Nobel Separation Technology": {
-      "2021": " ",
-      "2022": " ",
+      
       "2023": "https://drive.google.com/file/d/1nowj_Blaz9E8NjNSHdMD3EgOlRlYOm7e/view?usp=drive_link",
       "2024": "https://drive.google.com/file/d/1bxWvGpHlBUrwIvQX-82BJ5nuBI8ay1Va/view?usp=drive_link",
-      "2025": " "
+      
     }
   }
 };
