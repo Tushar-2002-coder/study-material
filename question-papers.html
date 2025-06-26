@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Study Material Tushar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Study Material Tushar</title>
   <style>
     * {
       margin: 0;
@@ -15,11 +15,10 @@
       background: linear-gradient(to top, #9869cb, #805fd3, #4c75cf, #61db61, #dfdf66, #e3b867, #c45656);
       color: #333;
     }
-
     header {
       background: linear-gradient(to right, #d6e96e, #e11d41);
       padding: 20px;
-      color: rgb(255, 255, 255);
+      color: white;
       font-size: 2em;
       font-weight: bold;
       display: flex;
@@ -81,7 +80,7 @@
       display: none;
       position: absolute;
       background-color: white;
-      min-width: 160px;
+      min-width: 10%;
       box-shadow: 0px 8px 16px rgba(0,0,0,0.8);
       z-index: 1;
     }
@@ -99,48 +98,9 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
-    .logout-btn {
-      color: rgb(45, 31, 243);
-      cursor: pointer;
-      padding: 12px 5%;
-      text-decoration: none;
-      text-align: center;
-      font-weight: bold;
-      border-radius: 20px;
-      background: linear-gradient(to right, #a7ec66, #eab866);
-      float: right;
-      font-weight: bold;
-      font-size: medium;
-      border-color:#0dffd7;
-    }
     .content {
       padding: 40px 10%;
       font-size: 18px;
-      text-align: left;
-      
-    }
-    form select{
-      width: 30%;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      font-size: medium;
-      border-radius: 10px;
-    } 
-    form button {
-      font-weight: 200;
-      background-color:#eb211a;
-      color: #f4f6ec;
-      border: none;
-      cursor: pointer;
-      border-radius: 20px;
-      width: 10%;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      font-size: medium;
-    }
-    form button:hover {
-      background: #0843c1;
-      color: #ffffff;
     }
     .username {
       font-size: 28px;
@@ -174,58 +134,6 @@
       text-align: center;
       font-size: 18px;
     }
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 10;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(37, 33, 33, 0.5);
-    }
-
-    .modal-content {
-      background: linear-gradient(to right, #0af3cc, #108feb);
-      margin: 10% auto;
-      padding: 20px;
-      width: 300px;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .modal-content input {
-      width: 90%;
-      margin: 8px 0;
-      padding: 8px;
-    }
-
-    .modal-content button {
-      padding: 8px 12px;
-      margin: 8px;
-      background-color: #84f180;
-      color: rgb(31, 28, 28);
-      border: none;
-      cursor: pointer;
-    }
-
-    .modal-content button:hover {
-      background-color: #e7eb0a;
-    }
-    .animated-text {
-      animation: pulse 2s infinite;
-      font-family: 'Times New Roman', Times, serif;
-      text-align: center;
-
-}
-
-@keyframes pulse {
-   0% {opacity: 0.5;}
-  50% {opacity: 1;}
-  100% {opacity: 0.5;}
-}
-    
     #overlay {
       display: none;
       position: fixed;
@@ -233,6 +141,29 @@
       width: 100vw; height: 100vh;
       background: rgba(0, 0, 0, 0.4);
       z-index: 9998;
+    }
+    form select{
+      width: 30%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: medium;
+      border-radius: 10px;
+    } 
+    form button {
+      font-weight: 200;
+      background-color:#eb211a;
+      color: #f4f6ec;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      width: 10%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: medium;
+    }
+    form button:hover {
+      background: #0843c1;
+      color: #ffffff;
     }
     h1{
       text-align: center;
@@ -266,26 +197,28 @@
       line-height: 1.8;
       font-size: 19px;
     }
+     @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+      .footer-left, .footer-right {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+      }
+    }
   </style>
-  <script>
-  if (performance.navigation.type === 1) {
-    window.location.href = "dashboard.html";
-  }
-</script>
 </head>
 <body>
-
   <header>
     <div class="profile-btn" id="profileBtn">U</div>
     <strong><h1>📘 STUDY MATERIAL</h1>
       <p><h2>This website is only for Chemical Engineering Students</h2></p></strong>
   </header>
-
   <nav>
 <div class="navbar">
   <a href="dashboard.html">HOME</a>
   <a href="about.html">ABOUT US</a>
-  
   <div class="dropdown">
     <button class="dropbtn">SERVICES ▼</button>
     <div class="dropdown-content">
@@ -297,7 +230,6 @@
       <a href="https://www.ugierkl.ac.in/placement_notice.php"target="_blank">Placement Notice</a>
     </div>
   </div>
-
   <div class="dropdown">
     <button class="dropbtn">MATERIALS ▼</button>
     <div class="dropdown-content">
@@ -310,36 +242,42 @@
     </div>
   </div>
       <a href="contact-us.html">CONTACT US</a>
-      <button class="logout-btn" onclick="logout()">LOGOUT</button>
-</div>
+  </div>
 </nav>
-
-
  <div class="content">
     <div class="username">Welcome,<span id="userName">User</span> to the QUESTION BANK Section. ! 👋</div>
+    
     <main class="content">
-    <h1>Select Semester and Subject (Question Papers)</h1><br/><br/>
-    <form id="qpForm">
-      <label for="semester"><b>Semester:</b></label><br />
-      <select id="semester" required>
-        <option value="">--Select Semester--</option>
-        <option value="sem1">1st Semester</option>
-        <option value="sem2">2nd Semester</option>
-        <option value="sem3">3rd Semester</option>
-        <option value="sem4">4th Semester</option>
-        <option value="sem5">5th Semester</option>
-        <option value="sem6">6th Semester</option>
-      </select><br /><br />
+  <h1>Select Question Paper</h1><br /><br />
+  <form id="notesForm">
+    <label for="semester"><b>Semester:</b></label><br />
+    <select id="semester" required>
+      <option value="">--Select Semester--</option>
+      <option value="sem1">1st Semester</option>
+      <option value="sem2">2nd Semester</option>
+      <option value="sem3">3rd Semester</option>
+      <option value="sem4">4th Semester</option>
+      <option value="sem5">5th Semester</option>
+      <option value="sem6">6th Semester</option>
+    </select><br /><br />
 
-      <label for="subject"><b>Subject:</b></label><br />
-      <select id="subject" required>
-        <option value="">--Select Subject--</option>
-      </select><br /><br />
+    <label for="subject"><b>Subject:</b></label><br />
+    <select id="subject" required>
+      <option value="">--Select Subject--</option>
+      <!-- Options will be added via JavaScript -->
+    </select><br /><br />
 
-      <button type="submit">Submit</button>
-    </form>
-    </main>
+    <label for="year"><b>Year:</b></label><br />
+    <select id="year" required>
+      <option value="">--Select Year--</option>
+      <!-- Options will be added via JavaScript -->
+    </select><br /><br />
+
+    <button type="submit" id="submitBtn">Submit</button>
+  </form>
+</main>
 </div>
+
   <footer>
     <div class="footer-left">
       <p><a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"/></a></p><br/>
@@ -362,115 +300,287 @@
   Contact: tusharsharma89372@gmail.com<br/>
   © 2025 Study Material Tushar | All rights reserved. Designed & Developed by Tushar
 </div>
+ <script>
 
-
-  <!-- Profile Modal -->
-  <div class="modal" id="profileModal">
-    <div class="modal-content">
-      <h3>User Profile</h3>
-      <input type="text" id="nameInput" disabled />
-      <input type="email" id="emailInput" disabled />
-      <button id="editBtn">Edit</button>
-      <button id="saveBtn" style="display:none;">Save</button>
-    </div>
-  </div>
-
-  <script>
-
-    // Subject options by semester
     const semesterSubjects = {
-      sem1: [" ", " ", " ", " ", " "],
-      sem2: [" ", " ", " ", " ", " "],
-      sem3: [" ", " ", " ", " ", " "],
-      sem4: [" ", " ", " ", " ", " "],
-      sem5: [" ", " ", " ", " ", " "],
-      sem6: [" ", " ", " "," ", " ",]
+      sem1: ["English", "Applied Physics-I", "Mathematics-I", "Electrical & Electronics", "Environmental Science"],
+      sem2: ["Computer Application", "Applied Physics-II", "Mathematics-II", "Applied Chemistry", "Engineering Mechanics"],
+      sem3: ["Physical Chemistry", "Fluid Mechanics", "Mechanical Operation", "Industrial Stochiometry", "EVS"],
+      sem4: ["Organic Chemistry", "Heat Transfer", "Mass Transfer-I", "Chemical Processing Industries-I"],
+      sem5: ["EMST", "Mass Transfer-II", "Chemical Processing Industries-II", "Chemical Engineering Thermodynamics", "Instrumentation & Chemical Analysis"],
+      sem6: ["Plant Safety Management", "Chemical Reaction Engineering", "Petroleum Refining & Petrochemical TechnologY","Nobel Separation Technology"]
     };
 
-    // PDF Links for subjects
-    const pdfLinks = {
-      sem1: {
-        Chemistry: "https://drive.google.com/sem1-chemistry",
-        Math: "https://drive.google.com/sem1-math",
-        Physics: "https://drive.google.com/sem1-physics"
-      },
-      sem2: {
-        "Applied Chemistry": "https://drive.google.com/sem2-applied-chemistry",
-        "Engineering Drawing": "https://drive.google.com/sem2-drawing",
-        "Communication Skills": "https://drive.google.com/sem2-communication"
-      },
-      sem3: {
-        "Mechanical Operations": "https://drive.google.com/sem3-mech-ops",
-        "Fluid Flow": "https://drive.google.com/sem3-fluid",
-        "Chemical Process Calculations": "https://drive.google.com/sem3-cpc"
-      },
-      sem4: {
-        "Heat Transfer": "https://drive.google.com/sem4-ht",
-        "Instrumentation": "https://drive.google.com/sem4-instrumentation",
-        "Material Technology": "https://drive.google.com/sem4-material"
-      },
-      sem5: {
-        "CRE": "https://drive.google.com/sem5-cre",
-        "Petroleum": "https://drive.google.com/sem5-petro",
-        "Mass Transfer-I": "https://drive.google.com/sem5-mt1"
-      },
-      sem6: {
-        "NST": "https://drive.google.com/sem6-nst",
-        "Mass Transfer-II": "https://drive.google.com/sem6-mt2",
-        "Project Work": "https://drive.google.com/sem6-project"
-      }
-    };
+    const subjectYears = ["2021", "2022", "2023", "2024", "2025"];
 
-    // Populate subjects when semester changes
-    document.getElementById("semester").addEventListener("change", function () {
-      const semester = this.value;
-      const subjectSelect = document.getElementById("subject");
-      subjectSelect.innerHTML = '<option value="">--Select Subject--</option>';
-      if (semesterSubjects[semester]) {
-        semesterSubjects[semester].forEach(subject => {
-          const option = document.createElement("option");
-          option.value = subject;
-          option.textContent = subject;
-          subjectSelect.appendChild(option);
-        });
-      }
-    });
+        const pdfLinks = {
+  sem1: {
+    "English": {
+      "2021": " ",
+      "2022": "https://drive.google.com/file/d/1NIeHvULXgqpr4d0Mm2ZG7IuRjaZ4mAez/view?usp=drive_link",
+      "2023": " ",
+      "2024": " ",
+      "2025": " "
+    },
+    "Applied Physics-I": {
+      "2021": " ",
+      "2022": " ",
+      "2023": "https://drive.google.com/file/d/19nb0cJ12j4P5L2Va52qKMVeTwgvXFBY1/view?usp=drive_link",
+      "2024": " ",
+      "2025": " "
+    },
+    "Mathematics-I": {
+      "2021": " ",
+      "2022": "https://drive.google.com/file/d/1-8rf1hH9_MzgWcAirwj-3iZ73wSpO0xL/view?usp=drive_link",
+      "2023": " ",
+      "2024": " ",
+      "2025": " "
+    },
+    "Electrical & Electronics": {
+      "2021": " ",
+      "2022": "https://drive.google.com/file/d/1MxaCQUIcyr-bTBOVbOLAhvVI0SJqavwz/view?usp=drive_link",
+      "2023": " ",
+      "2024": " ",
+      "2025": " "
+    },
+    "Environmental Science": {
+      "2021": " ",
+      "2022": " ",
+      "2023": " ",
+      "2024": " ",
+      "2025": " "
+    }
+  },
 
-      // Form submission
-    document.getElementById("qpForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const semester = document.getElementById("semester").value;
-      const subject = document.getElementById("subject").value;
+  sem2: {
+    "Computer Application": {
+      "2021": " ",
+      "2022": " ",
+      "2023": "https://drive.google.com/file/d/1ERs_suBV-DWNLPAvUAKX6umaYNkRADXX/view?usp=drive_link",
+      "2024": " ",
+      "2025": " "
+    },
+    "Applied Physics-II": {
+      "2021": " ",
+      "2022": " ",
+      "2023": " ",
+      "2024": " ",
+      "2025": " "
+    },
+    "Mathematics-II": {
+      "2021": " ",
+      "2022": " ",
+      "2023": "https://drive.google.com/file/d/1o-cCZBLXyoVL-5KjZMWzr-zDdPDz12ww/view?usp=drive_link",
+      "2024": " ",
+      "2025": " "
+    },
+    "Applied Chemistry": {
+      "2021": " ",
+      "2022": "https://drive.google.com/file/d/1qFDYoPy-pTqszy_J5kju0u260YjMhx_Z/view?usp=drive_link",
+      "2023": " ",
+      "2024": " ",
+      "2025": " "
+    },
+    "Engineering Mechanics": {
+      "2021": " ",
+      "2022": " ",
+      "2023": "https://drive.google.com/file/d/1pjTe_prpnNzkxQmJqh4aChKJ-VrMn0XQ/view?usp=drive_link",
+      "2024": " ",
+      "2025": " "
+    }
+  },
 
-      const pdfLink = pdfLinks[semester]?.[subject];
+  sem3: {
+    "Physical Chemistry": {
+      "2021": " ",
+      "2022": " ",
+      "2023": "https://drive.google.com/file/d/1Jn4hhkPsSNw85XdHD_1O8uuPK628ey3v/view?usp=drive_link",
+      "2024": "https://drive.google.com/file/d/1GlHhFHMsocko2dCWgAgjdJm9VB8jdrBu/view?usp=drive_link",
+      "2025": " "
+    },
+    "Fluid Mechanics": {
+      "2021": " ",
+      "2022": " ",
+      "2023": "https://drive.google.com/file/d/1dWaIAu9LfpyCHlYNWjaFG5LC3Il1RUem/view?usp=drive_link",
+      "2024": "https://drive.google.com/file/d/1zs7d52b_WJe7jotSnpdrTnYfLjk6efWo/view?usp=drive_link",
+      "2025": " "
+    },
+    "Mechanical Operation": {
+      "2021": " ",
+      "2022": " ",
+      "2023": "https://drive.google.com/file/d/1BJXJs42ol_LPUZyLNHGfz0zyEQiz9GIX/view?usp=drive_link",
+      "2024": "https://drive.google.com/file/d/1TvJBtTBIIS1s4nOfZSaUnhwHVSFUq3VH/view?usp=drive_link",
+      "2025": " "
+    },
+    "Industrial Stochiometry": {
+      "2021": " ",
+      "2022": " ",
+      "2023": "https://drive.google.com/file/d/1T7Bt5PA06YxI2wXRjqhwCHocYTbuBTFD/view?usp=drive_link",
+      "2024": "https://drive.google.com/file/d/1aRE_ejwa_I__XTkq8VUJtplHun8otMjp/view?usp=drive_link",
+      "2025": " "
+    },
+    "EVS": {
+      "2021": " ",
+      "2022": " ",
+      "2023": "https://drive.google.com/file/d/1zfFFl5agP8edv1AV0Kr0q6yH-DK8L2qk/view?usp=drive_link",
+      "2024": "https://drive.google.com/file/d/1dR2bWKHCdIqQVQRI3exRYnu7eN-ijEoB/view?usp=drive_link",
+      "2025": " "
+    }
+  },
 
-      if (pdfLink) {
-        window.open(pdfLink, "_blank");
-      } else {
-        alert("PDF link not available for this selection.");
-      }
-    });
-    
-    document.getElementById('qpForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // form submit rokta hai
-    var semester = document.getElementById('semester').value;
+  sem4: {
+    "Organic Chemistry": {
+      "2021": " ",
+      "2022": "https://drive.google.com/file/d/1zg2lWCTBHJJef8nMmldhINgT_4f8nZca/view?usp=drive_link",
+      "2023": "https://drive.google.com/file/d/1PKMbzjsM6CAVoANqht4qKXO0jid2KmEv/view?usp=drive_link",
+      "2024": "https://drive.google.com/file/d/1aLvMTO-RJb7G0Hgv7ZCkft673iyNWsGO/view?usp=drive_link",
+      "2025": "https://drive.google.com/file/d/1XmMGBfYqlocdF5KUtBQ8Zn5vIjdt009F/view?usp=drive_link"
+    },
+    "Heat Transfer": {
+      "2021": " ",
+      "2022": " ",
+      "2023": "https://drive.google.com/file/d/1bgJibLVmgN3wD7znwdNlLCdYaY2jDYDX/view?usp=drive_link",
+      "2024": "https://drive.google.com/file/d/15H5MD-ihyjfPgqgsv_KbN21Sik3gYk-1/view?usp=drive_link",
+      "2025": "https://drive.google.com/file/d/1QjzMIhzDPLGhN8xmMYe3m81FBhuR3pyZ/view?usp=drive_link"
+    },
+    "Mass Transfer-I": {
+      "2021": " ",
+      "2022": " ",
+      "2023": " ",
+      "2024": "https://drive.google.com/file/d/15l3NxEGVtQvvA-YP-tzcPA6nw8fPenQe/view?usp=drive_link",
+      "2025": "https://drive.google.com/file/d/16WDWoxcn8GMDC8lRVuKI0TeHz9VoQA0E/view?usp=drive_link"
+    },
+    "Chemical Processing Industries-I": {
+      "2021": " ",
+      "2022": " ",
+      "2023": " ",
+      "2024": "https://drive.google.com/file/d/1bYj8RL9ILziz1dciMhqrA7CnG_Mb1EB7/view?usp=drive_link",
+      "2025": "https://drive.google.com/file/d/1b4UsiSODP64D0SCsQ7cDzHlxrlYvOkFZ/view?usp=drive_link"
+    }
+  },
 
-    // Semester wise PDF links
-    var pdfLinks = {
-      book1: 'https://drive.google.com/file/d/1f1T5JyNY6QcaxAhvOIwvlBcwpim19vkr/view?usp=drive_link',
-      book2: 'https://drive.google.com/file/d/1f1T5JyNY6QcaxAhvOIwvlBcwpim19vkr/view?usp=drive_link',
-      book3: 'https://drive.google.com/file/d/1f1T5JyNY6QcaxAhvOIwvlBcwpim19vkr/view?usp=drive_link',
-      book4: 'https://drive.google.com/file/d/1f1T5JyNY6QcaxAhvOIwvlBcwpim19vkr/view?usp=drive_link',
-      book5: 'https://drive.google.com/file/d/1f1T5JyNY6QcaxAhvOIwvlBcwpim19vkr/view?usp=drive_link',
-      book6: 'https://drive.google.com/file/d/1f1T5JyNY6QcaxAhvOIwvlBcwpim19vkr/view?usp=drive_link'
-    };
+  sem5: {
+    "EMST": {
+      "2021": " ",
+      "2022": " ",
+      "2023": " ",
+      "2024": "https://drive.google.com/file/d/1ChbkUFvJggiVWgcOoEseZKbfAsyzi11d/view?usp=drive_link",
+      "2025": " "
+    },
+    "Mass Transfer-II": {
+      "2021": "https://drive.google.com/file/d/1RE4u-oERybjefiLYmSTsoUAPOdTJBwED/view?usp=drive_link",
+      "2022": "https://drive.google.com/file/d/18JV_R9hJQNi0893DpnYMSDxLGZzGkjEz/view?usp=drive_link",
+      "2023": "https://drive.google.com/file/d/1FWdVB9wE79QQcEWLzm4hrXmkk13X9KH3/view?usp=drive_link",
+      "2024": "https://drive.google.com/file/d/1wbp-JW9D_caSlXkX81_YO8iIo8a7LqcH/view?usp=drive_link",
+      "2025": " "
+    },
+    "Chemical Processing Industries-II": {
+      "2021": " ",
+      "2022": " ",
+      "2023": "https://drive.google.com/file/d/1-5Xb46UpUrHvkXtK_idWHZtsK-vmcHA9/view?usp=drive_link",
+      "2024": " ",
+      "2025": " "
+    },
+    "Chemical Engineering Thermodynamics": {
+      "2021": " ",
+      "2022": " ",
+      "2023": " ",
+      "2024": "https://drive.google.com/file/d/1rXVYHDPiRg4vk4T49gaH51Wd5xDlCsiU/view?usp=drive_link",
+      "2025": " "
+    },
+    "Instrumentation & Chemical Analysis": {
+      "2021": " ",
+      "2022": " ",
+      "2023": " ",
+      "2024": "https://drive.google.com/file/d/121ycACpXtEzTWawzGwtPi_K5WqASw6Ph/view?usp=drive_link",
+      "2025": " "
+    }
+  },
 
-    if (pdfLinks[semester]) {
-      window.open(pdfLinks[semester], '_blank'); // PDF link open in new tab
-    } else {
-      alert('Please select a valid semester.');
+  sem6: {
+    "Plant Safety Management": {
+      "2021": " ",
+      "2022": " https://drive.google.com/file/d/1S5-_Xtwi7re7iiEzRMo-V8R4QxP3lkdB/view?usp=drive_link",
+      "2023": "https://drive.google.com/file/d/1Ptc-j17ojpMUXBtWyBoXIx9Cbfvs7_N0/view?usp=drive_link",
+      "2024": "https://drive.google.com/file/d/1OQk6mfgB_UV2ZyiVpBizEi2KNi2AegZc/view?usp=drive_link",
+      "2025": " "
+    },
+    "Chemical Reaction Engineering": {
+      "2021": " ",
+      "2022": "https://drive.google.com/file/d/1i4Ce-_m-luOVFQ0QUorewvcYw5Uy3cIv/view?usp=drive_link",
+      "2023": "https://drive.google.com/file/d/187Cko7HOEPjJHDjuqsHctzoALhv3MZoR/view?usp=drive_link",
+      "2024": "https://drive.google.com/file/d/1vWHjQU7uoKeo1v7DiT4hKT1k4g6pBMM6/view?usp=drive_link",
+      "2025": " "
+    },
+    "Petroleum Refining & Petrochemical Technology": {
+      "2021": " ",
+      "2022": "https://drive.google.com/file/d/189BSfJshktCrCb3H-mFq9EmEfOn93yCj/view?usp=drive_link",
+      "2023": "https://drive.google.com/file/d/1PK2AKjiPn6mjT2nFcJdNnJIiKIbm-10X/view?usp=drive_link",
+      "2024": "https://drive.google.com/file/d/1J0qbidSNEbv7C5EraKlv8o9fNxhQg4aA/view?usp=drive_link",
+      "2025": " "
+    },
+    "Nobel Separation Technology": {
+      "2021": " ",
+      "2022": " ",
+      "2023": "https://drive.google.com/file/d/1nowj_Blaz9E8NjNSHdMD3EgOlRlYOm7e/view?usp=drive_link",
+      "2024": "https://drive.google.com/file/d/1bxWvGpHlBUrwIvQX-82BJ5nuBI8ay1Va/view?usp=drive_link",
+      "2025": " "
+    }
+  }
+};
+
+
+     const semesterSelect = document.getElementById("semester");
+  const subjectSelect = document.getElementById("subject");
+  const yearSelect = document.getElementById("year");
+  const form = document.getElementById("notesForm");
+
+  // Populate subjects when semester changes
+  semesterSelect.addEventListener("change", () => {
+    const semester = semesterSelect.value;
+    subjectSelect.innerHTML = '<option value="">--Select Subject--</option>';
+    yearSelect.innerHTML = '<option value="">--Select Year--</option>';
+
+    if (semester && semesterSubjects[semester]) {
+      semesterSubjects[semester].forEach(subject => {
+        const option = document.createElement("option");
+        option.value = subject;
+        option.textContent = subject;
+        subjectSelect.appendChild(option);
+      });
     }
   });
+
+  // Populate years when subject changes
+  subjectSelect.addEventListener("change", () => {
+    yearSelect.innerHTML = '<option value="">--Select Year--</option>';
+    subjectYears.forEach(year => {
+      const option = document.createElement("option");
+      option.value = year;
+      option.textContent = year;
+      yearSelect.appendChild(option);
+    });
+  });
+
+  // Handle form submission
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const semester = semesterSelect.value;
+    const subject = subjectSelect.value;
+    const year = yearSelect.value;
+
+    if (semester && subject && year) {
+      const link = pdfLinks[semester]?.[subject]?.[year];
+      if (link) {
+        window.open(link, "_blank");
+      } else {
+        alert("PDF not available for selected options.");
+      }
+    } else {
+      alert("Please select all fields.");
+    }
+  });
+
     const userData = JSON.parse(localStorage.getItem("loggedInUser")) || { name: "User", email: "demo@gmail.com" };
     document.getElementById("userName").textContent = userData.name;
     document.getElementById("profileBtn").textContent = userData.name.charAt(0).toUpperCase();
@@ -480,37 +590,6 @@
     const emailInput = document.getElementById("emailInput");
     const editBtn = document.getElementById("editBtn");
     const saveBtn = document.getElementById("saveBtn");
-
-    document.getElementById("profileBtn").addEventListener("click", () => {
-      nameInput.value = userData.name;
-      emailInput.value = userData.email;
-      modal.style.display = "block";
-    });
-
-    editBtn.onclick = () => {
-      nameInput.disabled = false;
-      emailInput.disabled = false;
-      saveBtn.style.display = "inline-block";
-      editBtn.style.display = "none";
-    };
-
-    saveBtn.onclick = () => {
-      const updatedName = nameInput.value;
-      const updatedEmail = emailInput.value;
-      localStorage.setItem("loggedInUser", JSON.stringify({ name: updatedName, email: updatedEmail }));
-      document.getElementById("userName").textContent = updatedName;
-      document.getElementById("profileBtn").textContent = updatedName.charAt(0).toUpperCase();
-      modal.style.display = "none";
-    };
-
-    window.onclick = (e) => {
-      if (e.target == modal) modal.style.display = "none";
-    }
-
-    function logout() {
-      // Do not clear localStorage so data remains saved
-      window.location.href = "index.html";
-    }
   </script>
 
 </body>
