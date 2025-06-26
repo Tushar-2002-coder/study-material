@@ -121,53 +121,9 @@
     }
 
     .footer-left a {
-      margin-left: 80%;
+      margin-left: 1%;
       text-decoration: none;
       color: rgb(243, 32, 32);
-    }
-   
-     .help-message {
-      color: #d6b71b;
-      padding: 15px 20px;
-      text-align: center;
-      font-size: 18px;
-      font-weight: 600;
-    }
-    .help-container {
-      max-width: 70%;
-      margin: 50px auto;
-      padding: 30px;
-      background-color: #e9e9e9;
-      border-radius: 50px;
-      font-family: Arial, sans-serif;
-      line-height: 1.8;
-      box-shadow: 0 0 30px #c23131;
-    }
-    .help-container h2 {
-      text-align: center;
-      color: #c32323;
-      margin-bottom: 20px;
-    }
-    .help-container ul {
-      text-align: left;
-      color: #1e1c1c;
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: 420;
-      margin-left: 9%;
-      margin-right: 9%;
-      line-height: 1.8;
-      font-size: 19px;
-      padding-left: 20px;
-    }
-    .help-container ul li {
-      margin-bottom: 15px;
-    }
-    .contact-info {
-      color: #ccc60a;
-      text-align: center;
-      padding: 10px 20px 20px;
-      font-size: 16px;
-      line-height: 1.9;
     }
     #overlay {
       display: none;
@@ -208,17 +164,70 @@
       font-size: 11px;
     }
     img{
-      width: 40%;
-      height: 40%;
+      width: 15%;
+      height: 15%;
       object-fit: cover;
-    }     
+      margin-left: 13%
+      
+    }
+     .help-message {
+      color: #0414fa;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .help-container {
+      max-width: 90%;
+      margin: 40px auto;
+      padding: 30px 10px;
+      background-color: #e9e9e9;
+      border-radius: 50px;
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+      box-shadow: 0 0 30px #c23131;
+    }
+    .help-container h2 {
+      text-align: center;
+      color: #e90808;
+      margin-bottom: 20px;
+    }
+    .help-container ul {
+      text-align: left;
+      color: #1e1c1c;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 420;
+      margin-left: 5%;
+      margin-right: 5%;
+      line-height: 1.8;
+      font-size: 16px;
+      padding-left: 20px;
+    }
+    .help-container ul li {
+      margin-bottom: 15px;
+    }
+    .contact-info {
+      color: #fff700;
+      text-align: center;
+      padding: 10px 20px 20px;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+    
+    center{
+      color:#f3f725;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: small;
+      font-weight: bold;
+      text-align: center;
+    }
     form {
       background: linear-gradient(to bottom, #ef7878, #e7a936, #f3f352, #7fed7f);
-      padding: 20px;
+      padding: 15px;
       border-radius: 10px;
-      width: 75%;
+      width: 100%;
       max-width: 500px;
-      margin: 12px;
+      margin: 5px;
       box-shadow: 0 0 10px rgba(0,0,0,0.6);
       color: rgb(0, 0, 0);
     }
@@ -227,45 +236,39 @@
       margin-top: 10px;
     }
     input, textarea {
-      width: 96%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+      width: 100%;
+      padding: 2px;
+      margin-top: 2px;
+      border-radius: 1px;
+      border: 1px solid #991919;
     }
     button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #007bff;
+      margin-top: 5px;
+      padding: 5px 10px;
+      background: #3f91e9;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
     }
     button:hover {
-      background: #105197;
-    }
-    center{
-      color:#f3f725;
-      font-size: small;
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: bold;
-      text-align: center;
+      background: #06e828;
     }
     @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px;
-  }
-  .navbar a, .dropdown .dropbtn {
-    width: 100%;
-    display: block;
-    text-align: left;
-  }
-}
+      .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .navbar a, .dropdown .dropbtn {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+      }
   </style>
 </head>
 <body>
+
  <header>
     <div class="profile-btn" id="profileBtn">U</div>
     <strong><h1>📘 STUDY MATERIAL</h1>
@@ -301,10 +304,9 @@
 </div>
 </nav>
   <div class="content">
-    <div class="username">&nbsp;&nbsp;Welcome,<span id="userName">User</span> to the help & feedback section. ! 👋</div>
+     <div class="username">&nbsp;&nbsp;&nbsp;Welcome,<span id="userName">User</span> to the help & feedback section. ! 👋</div>
     <center><p>Help & Feedback Section</p></center>
  <div class="help-container">
-   <section style="padding: 10px;">
     <h2>Help & Guide to Use the Website</h2>
     <ul>
       <li><strong>Semester-wise Notes and Syllabus:</strong> Go to the <em>"Syllabus"</em> or <em>"Notes"</em> section. Select your semester and download PDF notes or syllabus.</li>
@@ -331,8 +333,9 @@
   </div>
   </div>
   <footer>
+     
     <div class="footer-left">
-      <form id="contact-form">
+<form id="contact-form">
     <h2>Send Us Your Feedback</h2>
     <label for="name">Your Name:</label>
     <input type="text" name="user_name" required>
@@ -343,21 +346,35 @@
     <button type="submit">Send</button>
   </form>
   <br/>
-   
-   
-      <p><a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"/></a></p><br/>
-      <p><a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/></a></p><br/>
-      <p><a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube"/></a></p><br/>
-    </div>
+      <p><a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube"/></a></p>
+</div>
+    
     <div class="footer-right">
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Admin Contact</strong></p>
-      
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📍 Address: Plot No.- A/209, Shital nagar, BONDAMUNDA,</p>
-      <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rourkela (770032),</P>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUNDARGARH, ODISHA, INDIA</p>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📧 &nbsp;Email: studymaterial.tushar@gmail.com</p><br/>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📞 &nbsp;Phone: +91-8260291705</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Admin Contact</strong></p>
+      <br/><br/><br/><br/><br/><br/><br/>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📍 Address: Plot No.- A/209, Shital nagar, BONDAMUNDA,</p><br/>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rourkela (770032),</P><br/>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUNDARGARH, ODISHA, INDIA</p><br/>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📧 &nbsp;Email: studymaterial.tushar@gmail.com</p><br/>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📞 &nbsp;Phone: +91-8260291705</p><br/>
     </div>
       </footer>
       <!-- Second Footer (Bottom-most strip) -->
@@ -366,8 +383,6 @@
   © 2025 Study Material Tushar | All rights reserved. Designed & Developed by Tushar
 </div>
 
-
-  
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 
   <script>
@@ -394,8 +409,6 @@
     const modal = document.getElementById("profileModal");
     const nameInput = document.getElementById("nameInput");
     const emailInput = document.getElementById("emailInput");
-    const editBtn = document.getElementById("editBtn");
-    const saveBtn = document.getElementById("saveBtn");
   </script>
 
 </body>
