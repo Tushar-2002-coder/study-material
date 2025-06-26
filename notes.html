@@ -473,39 +473,6 @@
     const modal = document.getElementById("profileModal");
     const nameInput = document.getElementById("nameInput");
     const emailInput = document.getElementById("emailInput");
-    const editBtn = document.getElementById("editBtn");
-    const saveBtn = document.getElementById("saveBtn");
-
-    document.getElementById("profileBtn").addEventListener("click", () => {
-      nameInput.value = userData.name;
-      emailInput.value = userData.email;
-      modal.style.display = "block";
-    });
-
-    editBtn.onclick = () => {
-      nameInput.disabled = false;
-      emailInput.disabled = false;
-      saveBtn.style.display = "inline-block";
-      editBtn.style.display = "none";
-    };
-
-    saveBtn.onclick = () => {
-      const updatedName = nameInput.value;
-      const updatedEmail = emailInput.value;
-      localStorage.setItem("loggedInUser", JSON.stringify({ name: updatedName, email: updatedEmail }));
-      document.getElementById("userName").textContent = updatedName;
-      document.getElementById("profileBtn").textContent = updatedName.charAt(0).toUpperCase();
-      modal.style.display = "none";
-    };
-
-    window.onclick = (e) => {
-      if (e.target == modal) modal.style.display = "none";
-    }
-
-    function logout() {
-      // Do not clear localStorage so data remains saved
-      window.location.href = "index.html";
-    }
   </script>
 
 </body>
