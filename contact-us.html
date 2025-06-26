@@ -387,7 +387,7 @@
 
   <script>
     // Replace with your EmailJS user ID
-    emailjs.init("8qX6DCbm5nU4wyCxs"); 
+   emailjs.init("8qX6DCbm5nU4wyCxs"); 
 
     document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault();
@@ -400,7 +400,6 @@
           alert('Failed to send message: ' + JSON.stringify(error));
         });
     });
-
 
     const userData = JSON.parse(localStorage.getItem("loggedInUser")) || { name: "User", email: "demo@gmail.com" };
     document.getElementById("userName").textContent = userData.name;
