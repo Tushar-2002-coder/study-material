@@ -414,27 +414,11 @@
     .eye-btn:hover{
       background:none;
     }
-    .navbar {
-      background: linear-gradient(to right, #6498ed, #68c0e9, #c3f05b, #57e96b, #f38cd6);
-      overflow: hidden;
-      justify-content: space-between;
-      align-items: center;
-      padding: 8px 1%;
-    }
-    .navbar a {
-      float: left;
-      color: #ffffff;
-      padding: 14px 20px;
-      text-decoration: none;
-      text-align: center;
-      font-weight: bold;
-      position: relative;
-      font-size: 16px;  
-    }
-    .dropdown {
-      float: left;
-      overflow: hidden;
-    }
+    nav, .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
     .dropdown .dropbtn {
       font-size: 16px;    
       border: none;
@@ -451,22 +435,7 @@
     .navbar a:hover, .dropdown:hover .dropbtn {
       background: linear-gradient(to right, #1faa69, #1f48a0);
     }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: white;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.8);
-      z-index: 1;
-    }
-    .dropdown-content a {
-      float: none;
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
+    
     .dropdown-content a:hover {
       background-color: #f6eded;
     }
@@ -477,13 +446,13 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 25%;
     padding: 10px 0;
     font-size: 0.9em;
   }
 
     .footer-left a {
-      margin-left: 1%;
+      margin-left: 15%;
       text-decoration: none;
       color: rgb(243, 32, 32);
     }
@@ -492,10 +461,8 @@
       display: block;
       margin-top: 15px;
       font-weight: bold;
+      text-align: left;
     }
-    
-    
-    
     button {
       padding: 10px 20px;
       border: none;
@@ -548,8 +515,6 @@
       
     }
 }
-
-    
   </style>
 </head>
 <body>
