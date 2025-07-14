@@ -90,6 +90,44 @@
       text-align: center;
 
 }
+/*help email sent box*/
+    section {
+      max-width: 500px;
+      padding: 30px;
+      margin: 0 5% 1% 40%;
+      box-shadow: 0 0 30px #50ea1d;
+      border-radius: 10px;
+      color: #cee80e;
+      height: ;
+    }
+   
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 110px;
+    }
+    button:hover{
+        background-color: #12d412;
+        color:#000000;
+    }
+
+
 
 @keyframes pulse {
    0% {opacity: 0.5;}
@@ -107,7 +145,7 @@
     }
     h1{
       text-align: center;
-      color: #081c7e;
+      color: white;
       font-family: 'Times New Roman', Times, serif;
       font-size: 28px;
       margin-top: 2%;
@@ -193,7 +231,7 @@
 <h1 class="animated-text">Welcome to the Tushar's Web</h1><br/>
     <center><p>Select from the menu to explore notes, question papers, and more.</p></center>
 
-    <section style="padding: 10px;">
+    <div style="padding: 10px;">
     <h2 class="animated-text">The Future of Chemical Engineering in India</h2>
     <h5>
       <p>
@@ -215,13 +253,26 @@
       As India continues to expand its industrial base, the demand for skilled chemical engineers will only grow. Whether in sustainable energy, water treatment, pharmaceuticals, or petrochemical industries, chemical engineers will be the backbone of innovation and production. Choosing this field means becoming a part of the nation’s progress and making a real impact.
     </p></h5>
   </div>
-</section>
+</div>
   <footer>
     <div class="footer-left">
       <p><a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"/></a></p><br/>
       <p><a href="https://www.instagram.com/mr__tushar07092002/"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/></a></p><br/>
       <p><a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube"/></a></p><br/>
     </div>
+<section>
+    <h1>Send Us Your Feedback</h1>
+    <form id="contact-form">
+    <label for="name">Your Name:</label>
+    <input type="text" name="user_name" required>
+    <label for="email">Your Email:</label>
+    <input type="email" name="user_email" required>
+    <label for="message">Your Message:</label>
+    <textarea name="message" rows="6" required></textarea>
+    <button style="padding: 10px 15px; border-radius: 20px; border: none; font-size: 18px; cursor: pointer; background-color:#eb211a; color: white; margin-top: 1%;">Send</button>
+  </form>
+  <br/>
+  </section>
     </footer>
     <!-- Second Footer (Bottom-most strip) -->
 <div style="color:#e5e5e5;background: linear-gradient(to right, #4e3030, #41461b); text-align: center; padding: 10px 2%; font-size: 8px;">
