@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UGIE Notes — ChemEd Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#050d1a;--navy-mid:#0a1628;--navy-card:#0f1f36;--navy-border:rgba(0,212,170,0.15);--teal:#00d4aa;--teal-dim:rgba(0,212,170,0.1);--teal-glow:rgba(0,212,170,0.2);--text:#e8edf5;--text-muted:#8899b0;--text-faint:#4a5a70;--sans:'Source Sans 3',sans-serif;--serif:'Playfair Display',serif;--mono:'DM Mono',monospace}
+body{background:var(--navy);color:var(--text);font-family:var(--sans);line-height:1.7;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--navy-border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo{width:38px;height:38px;background:var(--teal-dim);border:1px solid var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:14px;color:var(--teal)}
+.nav-title{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--text)}.nav-title span{color:var(--teal)}
+.nav-links{display:flex;align-items:center;gap:0.25rem}
+.nav-link{text-decoration:none;color:var(--text-muted);font-size:0.875rem;padding:0.5rem 0.85rem;border-radius:6px;transition:color 0.2s,background 0.2s}
+.nav-link:hover,.nav-link.active{color:var(--teal);background:var(--teal-dim)}
+.nav-dropdown{position:relative}
+.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--navy-card);border:1px solid var(--navy-border);border-radius:10px;min-width:210px;padding:0.4rem;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.nav-dropdown:hover .nav-dropdown-menu{display:block}
+.nav-dropdown-menu a{display:block;padding:0.5rem 0.9rem;border-radius:6px;color:var(--text-muted);font-size:0.85rem;text-decoration:none;transition:all 0.15s}
+.nav-dropdown-menu a:hover{color:var(--teal);background:var(--teal-dim)}
+.profile-avatar{width:36px;height:36px;background:var(--teal-dim);border:1px solid var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:14px;color:var(--teal);cursor:pointer;font-weight:600;margin-left:0.5rem}
+.page-wrap{padding:5.5rem 2rem 3rem;max-width:1060px;margin:0 auto}
+.welcome-bar{background:var(--navy-card);border:1px solid var(--navy-border);border-radius:10px;padding:0.9rem 1.25rem;display:flex;align-items:center;gap:0.75rem;margin-bottom:2.5rem}
+.w-dot{width:8px;height:8px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
+.welcome-bar p{font-size:0.875rem;color:var(--text-muted)}.welcome-bar strong{color:var(--text)}
+.page-label{font-size:0.75rem;font-family:var(--mono);color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.5rem}
+.page-title{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;color:var(--text);margin-bottom:0.75rem}
+.page-sub{color:var(--text-muted);font-size:0.95rem;font-weight:300;margin-bottom:2.5rem}
+.badge-row{display:flex;align-items:center;gap:0.75rem;margin-bottom:2rem;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(0,212,170,0.08);border:1px solid rgba(0,212,170,0.3);color:var(--teal);font-size:0.75rem;font-weight:600;padding:0.3rem 0.85rem;border-radius:100px;letter-spacing:0.04em}
+.layout{display:grid;grid-template-columns:440px 1fr;gap:2.5rem;align-items:start}
+@media(max-width:860px){.layout{grid-template-columns:1fr}}
+.form-card{background:var(--navy-card);border:1px solid var(--navy-border);border-radius:14px;padding:2rem}
+.field{margin-bottom:1.35rem}
+.field label{display:block;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.45rem}
+.field select{width:100%;background:var(--navy);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.78rem 1rem;color:var(--text);font-family:var(--sans);font-size:0.875rem;outline:none;transition:border-color 0.2s;-webkit-appearance:none;cursor:pointer}
+.field select:focus{border-color:var(--teal)}
+.field select option{background:var(--navy-card);color:var(--text)}
+.field select:disabled{opacity:0.45;cursor:not-allowed}
+.btn-primary{width:100%;background:var(--teal);color:var(--navy);font-size:0.9rem;font-weight:700;letter-spacing:0.04em;padding:0.85rem;border-radius:8px;border:none;cursor:pointer;transition:all 0.2s}
+.btn-primary:hover{opacity:0.88;box-shadow:0 6px 24px var(--teal-glow)}
+/* Subject grid panel */
+.subjects-panel h3{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:0.5rem}
+.subjects-panel .sp-sub{font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem}
+.subjects-grid{display:flex;flex-direction:column;gap:0.55rem}
+.subj-row{background:var(--navy-card);border:1px solid var(--navy-border);border-radius:9px;padding:0.85rem 1.1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;transition:border-color 0.2s}
+.subj-row:hover{border-color:rgba(0,212,170,0.4)}
+.sr-left{display:flex;align-items:center;gap:0.85rem}
+.sr-sem{font-family:var(--mono);font-size:0.7rem;color:var(--teal);background:var(--teal-dim);border:1px solid rgba(0,212,170,0.25);padding:0.2rem 0.55rem;border-radius:5px;white-space:nowrap}
+.sr-name{font-size:0.85rem;color:var(--text)}
+.sr-btn{font-size:0.78rem;color:var(--teal);font-weight:600;text-decoration:none;white-space:nowrap;transition:opacity 0.15s}
+.sr-btn:hover{opacity:0.75}
+.sr-na{font-size:0.78rem;color:var(--text-faint)}
+footer{background:var(--navy-card);border-top:1px solid var(--navy-border);padding:3rem 2rem 1.5rem;margin-top:4rem}
+.footer-inner{max-width:1060px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2rem}
+.footer-brand p{font-size:0.875rem;color:var(--text-muted);margin-top:0.75rem;line-height:1.7;font-weight:300;max-width:300px}
+.footer-col h4{font-size:0.78rem;font-weight:600;color:var(--text);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.9rem}
+.footer-col a{display:block;font-size:0.83rem;color:var(--text-muted);text-decoration:none;margin-bottom:0.45rem;transition:color 0.15s}
+.footer-col a:hover{color:var(--teal)}
+.footer-contact-item{font-size:0.81rem;color:var(--text-muted);margin-bottom:0.5rem}
+.footer-contact-item a{color:var(--teal);text-decoration:none}
+.social-row{display:flex;gap:0.6rem;margin-top:0.75rem}
+.social-btn{width:36px;height:36px;background:var(--navy);border:1px solid var(--navy-border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;text-decoration:none;transition:all 0.2s}
+.social-btn:hover{border-color:var(--teal);background:var(--teal-dim)}
+.footer-bottom{border-top:1px solid var(--navy-border);padding-top:1.25rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem}
+.footer-bottom p{font-size:0.77rem;color:var(--text-faint)}.footer-bottom a{color:var(--teal);text-decoration:none}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr;gap:1.5rem}.nav-links .nav-link{display:none}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="dashboard.html" class="nav-brand"><div class="nav-logo">Ce</div><span class="nav-title">Chem<span>Ed</span> Portal</span></a>
+  <div class="nav-links">
+    <a href="dashboard.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <div class="nav-dropdown"><a href="#" class="nav-link">Services ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="https://skill.samsodisha.gov.in/Website/diploma/Diphome.aspx" target="_blank">Online Application Form</a>
+        <a href="https://sctevt.odisha.gov.in/en/notice-board/1/1" target="_blank">SCTEVT Notice</a>
+        <a href="https://www.eduqfix.com/PayDirect/#/student" target="_blank">QFIX Fees</a>
+        <a href="https://student.sctevtexams.in/sctevtstudentlogin/" target="_blank">Re-Evaluation &amp; Photocopy</a>
+        <a href="https://sctevtexams.in/sn20Yz" target="_blank">Diploma Result</a>
+        <a href="https://www.ugierkl.ac.in/placement_notice.php" target="_blank">Placement Notice</a>
+      </div>
+    </div>
+    <div class="nav-dropdown"><a href="#" class="nav-link active">Materials ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="syllabus.html">Syllabus</a><a href="books.html">Books</a>
+        <a href="question-papers.html">Question Papers</a><a href="ugie-notes.html">UGIE Notes PDF</a>
+        <a href="dtet-notes.html">DTET Notes PDF</a><a href="notes.html">Notes PDF</a>
+      </div>
+    </div>
+    <a href="contact-us.html" class="nav-link">Contact</a>
+    <div class="profile-avatar" id="profileBtn">U</div>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="welcome-bar"><div class="w-dot"></div><p>Welcome, <strong id="userName">User</strong> — UGIE Notes Section</p></div>
+  <p class="page-label">Study Materials</p>
+  <h1 class="page-title">UGIE Notes PDF</h1>
+  <p class="page-sub">Institute-specific notes aligned with the UGIE (Universal Guide for Industrial Education) pattern. Select your semester and subject to access notes for all six semesters.</p>
+  <div class="badge-row">
+    <span class="badge">UGIE Pattern</span>
+    <span class="badge">All 6 Semesters</span>
+    <span class="badge">Free Access</span>
+  </div>
+
+  <div class="layout">
+    <div class="form-card">
+      <form id="notesForm">
+        <div class="field">
+          <label for="semester">Semester</label>
+          <select id="semester" required>
+            <option value="">— Choose Semester —</option>
+            <option value="sem1">1st Semester</option>
+            <option value="sem2">2nd Semester</option>
+            <option value="sem3">3rd Semester</option>
+            <option value="sem4">4th Semester</option>
+            <option value="sem5">5th Semester</option>
+            <option value="sem6">6th Semester</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="subject">Subject</label>
+          <select id="subject" required disabled>
+            <option value="">— Select semester first —</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary">Open UGIE Notes PDF →</button>
+      </form>
+    </div>
+
+    <div class="subjects-panel">
+      <h3>All Available UGIE Notes</h3>
+      <p class="sp-sub">Browse all subjects with available PDFs across all semesters.</p>
+      <div class="subjects-grid" id="subjectsGrid"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="dashboard.html" class="nav-brand"><div class="nav-logo">Ce</div><span class="nav-title">Chem<span>Ed</span> Portal</span></a>
+        <p>A free study resource for Diploma &amp; Degree Chemical Engineering students across Odisha and India.</p>
+        <div class="social-row"><a href="#" class="social-btn">📘</a><a href="https://www.instagram.com/mr__tushar07092002/" class="social-btn">📸</a><a href="#" class="social-btn">▶️</a></div>
+      </div>
+      <div class="footer-col">
+        <h4>Materials</h4>
+        <a href="syllabus.html">Syllabus</a><a href="books.html">Books</a>
+        <a href="question-papers.html">Question Papers</a><a href="ugie-notes.html">UGIE Notes</a>
+        <a href="dtet-notes.html">DTET Notes</a><a href="notes.html">Notes PDF</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">📍 Plot A/209, Shital Nagar, Bondamunda, Rourkela — 770032</div>
+        <div class="footer-contact-item">📧 <a href="mailto:studymaterial.tushar@gmail.com">studymaterial.tushar@gmail.com</a></div>
+        <div class="footer-contact-item">📞 +91-8260291705</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ChemEd Portal · Designed &amp; Developed by Tushar · <a href="mailto:tusharsharma89372@gmail.com">tusharsharma89372@gmail.com</a></p>
+      <p>For Chemical Engineering Students · Odisha, India</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const semesterSubjects={sem1:["English","Applied Physics-I","Mathematics-I","Electrical & Electronics","Environmental Science"],sem2:["Computer Application","Applied Physics-II","Mathematics-II","Engineering Mechanics","Applied Chemistry"],sem3:["Physical Chemistry","Fluid Mechanics","Mechanical Operation","Industrial Stochiometry","EVS"],sem4:["Organic Chemistry","Heat Transfer","Mass Transfer-I","Chemical Processing Industries-I"],sem5:["EMST","Mass Transfer-II","Chemical Processing Industries-II","Chemical Engineering Thermodynamics","Instrumentation & Chemical Analysis"],sem6:["Plant Safety Management","Chemical Reaction Engineering","Petroleum Refining & Petrochemical Technology","Nobel Separation Technology"]};
+const pdfLinks={sem1:{"English":"https://drive.google.com/file/d/1YUCB1bpA5kgCy5Hk-vDzj0LzmqJUQbRB/view?usp=drive_link","Applied Physics-I":"https://drive.google.com/file/d/1HwkzKWy1GNbd_5yAiGI1_ls4YvyqFjhB/view?usp=drive_link","Mathematics-I":"https://drive.google.com/file/d/1Ec2R8EflIZwVHZanzPawYOvJxCEM2DE1/view?usp=drive_link","Electrical & Electronics":"","Environmental Science":""},sem2:{"Computer Application":"https://drive.google.com/file/d/1bV-0lU3XHM7VY6pQ3BsX3FJ0fxS935ut/view?usp=drive_link","Applied Physics-II":"https://drive.google.com/file/d/1HwkzKWy1GNbd_5yAiGI1_ls4YvyqFjhB/view?usp=drive_link","Mathematics-II":"https://drive.google.com/file/d/1LvROTf-BOS8DVS6GIMVIfqpOrPxmdb7_/view?usp=drive_link","Engineering Mechanics":"https://drive.google.com/file/d/1e946leA-a6KjY4hPjD6hJD8Pjt7b8-AA/view?usp=drive_link","Applied Chemistry":"https://drive.google.com/file/d/1zTSjVSg-aUqZ0Ifu-0_cCqMq8wkzEW_l/view?usp=drive_link"},sem3:{"Physical Chemistry":"https://drive.google.com/file/d/1DR-HbSuO-EUHCV2preH1bERHxN7C_U5q/view?usp=drive_link","Fluid Mechanics":"https://drive.google.com/file/d/1o4LEj6yknkmjD-RjLCIk7ICXRJeFV9hE/view?usp=drive_link","Mechanical Operation":"https://drive.google.com/file/d/1kCV7fHn3b24g8Yrfduawu1v3sBAazIZ6/view?usp=drive_link","Industrial Stochiometry":"https://drive.google.com/file/d/1Kl2UttsoGjetKQz90Suy7N2lPMGr0qdh/view?usp=drive_link","EVS":"https://drive.google.com/file/d/17hqQXv7_pWENthHJxl46hltExxT-oWaz/view?usp=drive_link"},sem4:{"Organic Chemistry":"https://drive.google.com/file/d/1M-_u-KPpzhhCzQP81WI9ouuCKMAjOe2n/view?usp=drive_link","Heat Transfer":"https://drive.google.com/file/d/1cE-063hll8NRM_vK3AP_gwsNPUMDVNEm/view?usp=drive_link","Mass Transfer-I":"https://drive.google.com/file/d/1nOGNPMpcFa2h51rK-Rv_bjx9Fd7RXaPL/view?usp=drive_link","Chemical Processing Industries-I":"https://drive.google.com/file/d/1nHCyeodC39OigcWs23PcyOtWW7kd0oeR/view?usp=drive_link"},sem5:{"EMST":"https://drive.google.com/file/d/1QeExIjkc7FaYw_WTn69ktA2aCcSonry9/view?usp=drive_link","Mass Transfer-II":"https://drive.google.com/file/d/1AEZ2tO4dxNzt-Lmz6bEQxSul_UdiTTLG/view?usp=drive_link","Chemical Processing Industries-II":"https://drive.google.com/file/d/1pppZdVtsQWYpYZ9kUvaJsiqpi5coKIgn/view?usp=drive_link","Chemical Engineering Thermodynamics":"https://drive.google.com/file/d/10YUd0L13beoMxblCyr86Xgfx09VhROgx/view?usp=drive_link","Instrumentation & Chemical Analysis":"https://drive.google.com/file/d/1L-sieMpmanBiallMX9GuuI5O8wOtrSkw/view?usp=drive_link"},sem6:{"Plant Safety Management":"https://drive.google.com/file/d/1K5mH6GU-UqgbHO8EA3qvhPAlcHF-OxVk/view?usp=drive_link","Chemical Reaction Engineering":"https://drive.google.com/file/d/1bcKtk8NLs1ngxNl4XZRiY5o9Y7XBefcl/view?usp=drive_link","Petroleum Refining & Petrochemical Technology":"https://drive.google.com/file/d/1uYfOz338ufGD48uGAvsjTBcd4ogRMn9Z/view?usp=drive_link","Nobel Separation Technology":"https://drive.google.com/file/d/11VhQEdPisl0QWw91iN-cXhaUu0mctZxM/view?usp=drive_link"}};
+const semLabel={sem1:"Sem I",sem2:"Sem II",sem3:"Sem III",sem4:"Sem IV",sem5:"Sem V",sem6:"Sem VI"};
+
+// Populate quick-access grid
+const grid=document.getElementById('subjectsGrid');
+Object.entries(semesterSubjects).forEach(([sem,subjects])=>{subjects.forEach(subject=>{const url=pdfLinks[sem]?.[subject];const row=document.createElement('div');row.className='subj-row';row.innerHTML=`<div class="sr-left"><span class="sr-sem">${semLabel[sem]}</span><span class="sr-name">${subject}</span></div>${url?`<a href="${url}" target="_blank" class="sr-btn">Open →</a>`:`<span class="sr-na">Coming soon</span>`}`;grid.appendChild(row);});});
+
+document.getElementById("semester").addEventListener("change",function(){
+  const sem=this.value,sub=document.getElementById("subject");
+  sub.innerHTML='<option value="">— Select Subject —</option>';
+  if(sem){sub.disabled=false;semesterSubjects[sem].forEach(s=>{const o=document.createElement("option");o.value=s;o.textContent=s;sub.appendChild(o);});}else sub.disabled=true;
+});
+document.getElementById("notesForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const sem=document.getElementById("semester").value,sub=document.getElementById("subject").value;
+  const link=pdfLinks[sem]?.[sub];
+  if(link)window.open(link,"_blank");
+  else alert("PDF not available for this subject yet. Please check back soon.");
+});
+const userData=JSON.parse(localStorage.getItem("loggedInUser"))||{name:"User"};
+document.getElementById("userName").textContent=userData.name;
+document.getElementById("profileBtn").textContent=userData.name.charAt(0).toUpperCase();
+</script>
+</body>
+</html>
